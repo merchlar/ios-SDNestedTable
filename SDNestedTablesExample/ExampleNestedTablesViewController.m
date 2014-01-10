@@ -32,6 +32,20 @@
 
 - (NSInteger)mainTable:(UITableView *)mainTable numberOfSubItemsforItem:(SDGroupCell *)item atIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (item.cellIndexPath.row == 0) {
+        return 3;
+    }
+    else if (item.cellIndexPath.row == 1) {
+        return 2;
+    }
+    else if (item.cellIndexPath.row == 2) {
+        return 4;
+    }
+    else if (item.cellIndexPath.row == 3) {
+        return 6;
+    }
+    
     return 3; 
 }
 
@@ -43,7 +57,7 @@
 
 - (SDSubCell *)item:(SDGroupCell *)item setSubItem:(SDSubCell *)subItem forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    subItem.itemText.text = [NSString stringWithFormat:@"My Sub Item %u", indexPath.row +1];
+    subItem.itemText.text = [NSString stringWithFormat:@"Musique %u", indexPath.row +1];
     return subItem;
 }
 

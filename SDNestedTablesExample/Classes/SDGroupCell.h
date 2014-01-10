@@ -16,7 +16,7 @@ typedef enum {
     AllSubCellsCommandNone,
 } AllSubCellsCommand;
 
-static const int height = 50;
+static const int height = 150;
 static const int subCellHeight = 40;
 
 @interface SDGroupCell : SDSelectableCell <UITableViewDelegate, UITableViewDataSource>
@@ -32,6 +32,7 @@ static const int subCellHeight = 40;
 @property (assign) int selectedSubCellsAmt;
 @property (nonatomic, strong) NSMutableDictionary *selectableSubCellsState;
 @property (strong) NSIndexPath *cellIndexPath;
+@property (weak, nonatomic) IBOutlet UIImageView *artistImageView;
 
 - (void) subCellsToggleCheck;
 - (void) rotateExpandBtn:(id)sender;

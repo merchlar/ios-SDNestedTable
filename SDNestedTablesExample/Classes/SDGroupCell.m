@@ -53,15 +53,15 @@
     [super setupInterface];
     
     CGRect bgrndFrame = self.backgroundView.frame;
-    bgrndFrame.size.height = 50;
+    bgrndFrame.size.height = height;
     self.backgroundView.frame = bgrndFrame;
     
-    expandBtn.frame = CGRectMake(0, 5, 40, 40);
-    [expandBtn setBackgroundColor:[UIColor clearColor]];
-    [expandBtn setImage:[UIImage imageNamed:@"disclosure"] forState:UIControlStateNormal];
-    [expandBtn addTarget:self.parentTable action:@selector(collapsableButtonTapped:withEvent:) forControlEvents:UIControlEventTouchUpInside];
-    [expandBtn addTarget:self action:@selector(rotateExpandBtn:) forControlEvents:UIControlEventTouchUpInside];
-    expandBtn.alpha = 0.45;
+//    expandBtn.frame = CGRectMake(0, 5, 40, 40);
+//    [expandBtn setBackgroundColor:[UIColor clearColor]];
+//    [expandBtn setImage:[UIImage imageNamed:@"disclosure"] forState:UIControlStateNormal];
+//    [expandBtn addTarget:self.parentTable action:@selector(collapsableButtonTapped:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+//    [expandBtn addTarget:self action:@selector(rotateExpandBtn:) forControlEvents:UIControlEventTouchUpInside];
+//    expandBtn.alpha = 0.45;
     
     offCheckBox = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"blueLedBigOff"]];
     onCheckBox = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"blueLedBig"]];

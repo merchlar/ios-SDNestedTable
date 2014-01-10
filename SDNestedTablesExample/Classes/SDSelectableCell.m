@@ -30,11 +30,11 @@
 {
     [self setClipsToBounds: YES];
     
-    tapTransitionsOverlay.backgroundColor = [UIColor colorWithRed:0.15 green:0.54 blue:0.93 alpha:1.0];
+//    tapTransitionsOverlay.backgroundColor = [UIColor colorWithRed:0.15 green:0.54 blue:0.93 alpha:1.0];
     
-    CGRect frame = self.itemText.frame;
-    frame.size.width = checkBox.frame.origin.x - frame.origin.x - (int)(self.frame.size.width/30);
-    self.itemText.frame = frame;
+//    CGRect frame = self.itemText.frame;
+//    frame.size.width = checkBox.frame.origin.x - frame.origin.x - (int)(self.frame.size.width/30);
+//    self.itemText.frame = frame;
 }
 
 - (SelectableCellState) toggleCheck
@@ -76,8 +76,8 @@
     [checkBox addSubview:onCheckBox];
     checkBox.alpha = 1.0;
     itemText.alpha = 1.0;
-    self.backgroundView.backgroundColor = UIColorFromRGBWithAlpha(0x0d2e4d, 1.0);
-    self.backgroundView.alpha = 0.7;
+//    self.backgroundView.backgroundColor = UIColorFromRGBWithAlpha(0x0d2e4d, 1.0);
+//    self.backgroundView.alpha = 0.7;
 }
 
 - (void) styleDisabled
@@ -86,8 +86,8 @@
     [checkBox addSubview:offCheckBox];
     checkBox.alpha = 1.0;
     itemText.alpha = 0.4;
-    self.backgroundView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:1.0];
-    self.backgroundView.alpha = 0.5;
+//    self.backgroundView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:1.0];
+//    self.backgroundView.alpha = 0.5;
 }
 
 - (void) styleHalfEnabled
@@ -96,8 +96,8 @@
     [checkBox addSubview:onCheckBox];
     checkBox.alpha = 0.45;
     itemText.alpha = 0.7;
-    self.backgroundView.backgroundColor = UIColorFromRGBWithAlpha(0x081c2f, 1.0);
-    self.backgroundView.alpha = 0.7;
+//    self.backgroundView.backgroundColor = UIColorFromRGBWithAlpha(0x081c2f, 1.0);
+//    self.backgroundView.alpha = 0.7;
 }
 
 - (void) tapTransition

@@ -9,6 +9,7 @@
 #import "ExampleNestedTablesViewController.h"
 #import "WatiBParseManager.h"
 #import <Parse/Parse.h>
+#import "UIImageView+WebCache.h"
 
 @interface ExampleNestedTablesViewController ()
 
@@ -96,6 +97,23 @@
 
 - (SDGroupCell *)mainTable:(UITableView *)mainTable setItem:(SDGroupCell *)item forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    PFObject * object = [self.items objectAtIndex:indexPath.row];
+
+    
+    NSString * url = [(PFFile *)[object objectForKey:@"banner_iphone"] url];
+
+    
+    [item.artistImageView setImageWithURL:[NSURL URLWithString:url]
+                    placeholderImage:nil
+                             options:SDWebImageRetryFailed
+                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+                               NSLog(@"completed !");
+//                               if ([self.loader isAnimating]) {
+//                                   [self.loader stopAnimating];
+//                               }
+                               
+                           }];
+    
     item.itemText.text = [NSString stringWithFormat:@"My Main Item %u", indexPath.row +1];
     return item;
 }

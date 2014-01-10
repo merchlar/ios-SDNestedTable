@@ -16,7 +16,7 @@ typedef enum {
     AllSubCellsCommandNone,
 } AllSubCellsCommand;
 
-static const int height = 150;
+static const int height = 168;
 static const int subCellHeight = 40;
 
 @interface SDGroupCell : SDSelectableCell <UITableViewDelegate, UITableViewDataSource>

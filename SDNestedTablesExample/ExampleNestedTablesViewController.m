@@ -7,6 +7,8 @@
 //
 
 #import "ExampleNestedTablesViewController.h"
+#import "WatiBParseManager.h"
+#import <Parse/Parse.h>
 
 @interface ExampleNestedTablesViewController ()
 
@@ -23,30 +25,73 @@
     return self;
 }
 
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    
+    [self fetchData];
+}
+
+#pragma mark - Methods
+
+- (void)fetchData {
+    
+    [[WatiBParseManager sharedManager] startDownloadPlayerInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        //        HUD.mode = MBProgressHUDModeIndeterminate;
+        //        HUD.labelText = @"Chargement";
+        
+        
+        if (!error) {
+            //Download finish
+            NSLog(@"Download Player Sucess");
+            self.items = objects;
+            [self.tableView reloadData];
+        }
+        else {
+            //Error download
+            NSLog(@"Download Player Error %@", error);
+            
+        }
+        
+        
+    }];
+    
+}
+
 #pragma mark - Nested Tables methods
 
 - (NSInteger)mainTable:(UITableView *)mainTable numberOfItemsInSection:(NSInteger)section
 {
-    return 8;
+    return [self.items count];
 }
 
 - (NSInteger)mainTable:(UITableView *)mainTable numberOfSubItemsforItem:(SDGroupCell *)item atIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (item.cellIndexPath.row == 0) {
-        return 3;
-    }
-    else if (item.cellIndexPath.row == 1) {
-        return 2;
-    }
-    else if (item.cellIndexPath.row == 2) {
-        return 4;
-    }
-    else if (item.cellIndexPath.row == 3) {
-        return 6;
-    }
+    PFObject * artist = [self.items objectAtIndex:indexPath.row];
     
-    return 3; 
+    NSArray * songs = [artist objectForKey:@"songs"];
+    
+    NSLog(@"%d songs for artist %@", [songs count], [artist objectForKey:@"name"]);
+    
+    return [songs count];
+    
+//    if (item.cellIndexPath.row == 0) {
+//        return 3;
+//    }
+//    else if (item.cellIndexPath.row == 1) {
+//        return 2;
+//    }
+//    else if (item.cellIndexPath.row == 2) {
+//        return 4;
+//    }
+//    else if (item.cellIndexPath.row == 3) {
+//        return 6;
+//    }
+//    
+//    return 3; 
 }
 
 - (SDGroupCell *)mainTable:(UITableView *)mainTable setItem:(SDGroupCell *)item forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,7 +102,11 @@
 
 - (SDSubCell *)item:(SDGroupCell *)item setSubItem:(SDSubCell *)subItem forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    subItem.itemText.text = [NSString stringWithFormat:@"Musique %u", indexPath.row +1];
+    
+    NSString * songTitle = [[[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row] objectForKey:@"name"];
+    NSNumber * songOrder = [[[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row] objectForKey:@"order"];
+
+    subItem.itemText.text = [NSString stringWithFormat:@"%d - %@", [songOrder intValue], songTitle];
     return subItem;
 }
 

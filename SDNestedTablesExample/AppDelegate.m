@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ExampleNestedTablesViewController.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -15,6 +16,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [Parse setApplicationId:@"KlEY7oBc4M78XYmmQH6hY0HSX8MVK2You8VYgCUQ"
+                  clientKey:@"KRJzH78w9O4LS9EbBY17ceCvCb6NMeWPuhBMO4We"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     ExampleNestedTablesViewController *nestedNav = [[ExampleNestedTablesViewController alloc] init];

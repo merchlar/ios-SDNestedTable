@@ -11,7 +11,18 @@
 		1876376C15A249C1004F1598 /* SDNestedTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1876376B15A249C1004F1598 /* SDNestedTableView.xib */; };
 		24A9455D187F498A00362C51 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A9455C187F498A00362C51 /* google.png */; };
 		24A9455F187F4A1000362C51 /* shinsekai.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A9455E187F4A1000362C51 /* shinsekai.png */; };
-		24A9456118804E2100362C51 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9456018804E2100362C51 /* Parse.framework */; };
+		24A945671880990F00362C51 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945661880990F00362C51 /* AudioToolbox.framework */; };
+		24A945691880991600362C51 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945681880991600362C51 /* CFNetwork.framework */; };
+		24A9456B1880992600362C51 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9456A1880992600362C51 /* CoreLocation.framework */; };
+		24A9456D1880992E00362C51 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9456C1880992E00362C51 /* libz.1.1.3.dylib */; };
+		24A9456F1880993600362C51 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9456E1880993600362C51 /* MobileCoreServices.framework */; };
+		24A945711880993C00362C51 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945701880993C00362C51 /* QuartzCore.framework */; };
+		24A945731880994300362C51 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945721880994300362C51 /* Security.framework */; };
+		24A945751880994A00362C51 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945741880994A00362C51 /* StoreKit.framework */; };
+		24A945771880995100362C51 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945761880995100362C51 /* SystemConfiguration.framework */; };
+		24A945791880998A00362C51 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945781880998A00362C51 /* Parse.framework */; };
+		24A9457C18809A7F00362C51 /* WatiBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A9457A18809A7F00362C51 /* WatiBParseManager.m */; };
+		24A9457F18809A9300362C51 /* WatiBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A9457E18809A9300362C51 /* WatiBConstants.m */; };
 		8B8EB7E6156A74B00061CF0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E5156A74B00061CF0C /* UIKit.framework */; };
 		8B8EB7E8156A74B00061CF0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E7156A74B00061CF0C /* Foundation.framework */; };
 		8B8EB7EA156A74B00061CF0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E9156A74B00061CF0C /* CoreGraphics.framework */; };
@@ -41,7 +52,20 @@
 		1876376B15A249C1004F1598 /* SDNestedTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SDNestedTableView.xib; path = SDNestedTablesExample/Nibs/SDNestedTableView.xib; sourceTree = SOURCE_ROOT; };
 		24A9455C187F498A00362C51 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
 		24A9455E187F4A1000362C51 /* shinsekai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shinsekai.png; sourceTree = "<group>"; };
-		24A9456018804E2100362C51 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		24A945661880990F00362C51 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		24A945681880991600362C51 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		24A9456A1880992600362C51 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		24A9456C1880992E00362C51 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		24A9456E1880993600362C51 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		24A945701880993C00362C51 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		24A945721880994300362C51 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		24A945741880994A00362C51 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		24A945761880995100362C51 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		24A945781880998A00362C51 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		24A9457A18809A7F00362C51 /* WatiBParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WatiBParseManager.m; path = SDNestedTable/WatiBParseManager.m; sourceTree = SOURCE_ROOT; };
+		24A9457B18809A7F00362C51 /* WatiBParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WatiBParseManager.h; path = SDNestedTable/WatiBParseManager.h; sourceTree = SOURCE_ROOT; };
+		24A9457D18809A9300362C51 /* WatiBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WatiBConstants.h; path = SDNestedTable/WatiBConstants.h; sourceTree = SOURCE_ROOT; };
+		24A9457E18809A9300362C51 /* WatiBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WatiBConstants.m; path = SDNestedTable/WatiBConstants.m; sourceTree = SOURCE_ROOT; };
 		8B8EB7E1156A74B00061CF0C /* SDNestedTablesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDNestedTablesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8EB7E5156A74B00061CF0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B8EB7E7156A74B00061CF0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,10 +102,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A945771880995100362C51 /* SystemConfiguration.framework in Frameworks */,
+				24A945751880994A00362C51 /* StoreKit.framework in Frameworks */,
+				24A945731880994300362C51 /* Security.framework in Frameworks */,
+				24A945711880993C00362C51 /* QuartzCore.framework in Frameworks */,
+				24A9456F1880993600362C51 /* MobileCoreServices.framework in Frameworks */,
+				24A9456D1880992E00362C51 /* libz.1.1.3.dylib in Frameworks */,
+				24A945791880998A00362C51 /* Parse.framework in Frameworks */,
+				24A9456B1880992600362C51 /* CoreLocation.framework in Frameworks */,
+				8B8EB7EA156A74B00061CF0C /* CoreGraphics.framework in Frameworks */,
+				24A945691880991600362C51 /* CFNetwork.framework in Frameworks */,
+				24A945671880990F00362C51 /* AudioToolbox.framework in Frameworks */,
 				8B8EB7E6156A74B00061CF0C /* UIKit.framework in Frameworks */,
 				8B8EB7E8156A74B00061CF0C /* Foundation.framework in Frameworks */,
-				24A9456118804E2100362C51 /* Parse.framework in Frameworks */,
-				8B8EB7EA156A74B00061CF0C /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +137,10 @@
 		8B72263D159A1DE3001B28C5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				24A9457D18809A9300362C51 /* WatiBConstants.h */,
+				24A9457E18809A9300362C51 /* WatiBConstants.m */,
+				24A9457B18809A7F00362C51 /* WatiBParseManager.h */,
+				24A9457A18809A7F00362C51 /* WatiBParseManager.m */,
 				1876376815A248C6004F1598 /* SDNestedTableViewController.h */,
 				1876376915A248C6004F1598 /* SDNestedTableViewController.m */,
 				8B720524159CABEB006BC732 /* Cells */,
@@ -165,7 +202,16 @@
 		8B8EB7E4156A74B00061CF0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				24A9456018804E2100362C51 /* Parse.framework */,
+				24A945781880998A00362C51 /* Parse.framework */,
+				24A945761880995100362C51 /* SystemConfiguration.framework */,
+				24A945741880994A00362C51 /* StoreKit.framework */,
+				24A945721880994300362C51 /* Security.framework */,
+				24A945701880993C00362C51 /* QuartzCore.framework */,
+				24A9456E1880993600362C51 /* MobileCoreServices.framework */,
+				24A9456C1880992E00362C51 /* libz.1.1.3.dylib */,
+				24A9456A1880992600362C51 /* CoreLocation.framework */,
+				24A945681880991600362C51 /* CFNetwork.framework */,
+				24A945661880990F00362C51 /* AudioToolbox.framework */,
 				8B8EB7E5156A74B00061CF0C /* UIKit.framework */,
 				8B8EB7E7156A74B00061CF0C /* Foundation.framework */,
 				8B8EB7E9156A74B00061CF0C /* CoreGraphics.framework */,
@@ -275,6 +321,8 @@
 				8BA4049A159E216F00F3D367 /* main.m in Sources */,
 				8BA40499159E216B00F3D367 /* ExampleNestedTablesViewController.m in Sources */,
 				8BA40498159E216700F3D367 /* AppDelegate.m in Sources */,
+				24A9457C18809A7F00362C51 /* WatiBParseManager.m in Sources */,
+				24A9457F18809A9300362C51 /* WatiBConstants.m in Sources */,
 				8BA40497159E216200F3D367 /* SDSubCell.m in Sources */,
 				8BA40496159E215F00F3D367 /* SDGroupCell.m in Sources */,
 				8BA40495159E215D00F3D367 /* SDSelectableCell.m in Sources */,
@@ -348,7 +396,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/fj/Downloads/ios-SDNestedTable-master",
+					"/Users/fj/Downloads/ios-SDNestedTable-master/**",
+					"/Users/fj/Desktop/Wati-B/Others\\ projects/ios-SDNestedTable",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDNestedTablesExample/SDNestedTables-Prefix.pch";
@@ -365,7 +414,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/fj/Downloads/ios-SDNestedTable-master",
+					"/Users/fj/Downloads/ios-SDNestedTable-master/**",
+					"/Users/fj/Desktop/Wati-B/Others\\ projects/ios-SDNestedTable",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDNestedTablesExample/SDNestedTables-Prefix.pch";

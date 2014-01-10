@@ -10,4 +10,6 @@
 
 @interface ExampleNestedTablesViewController : SDNestedTableViewController
 
+@property (nonatomic, strong) NSArray * items;
+
 @end

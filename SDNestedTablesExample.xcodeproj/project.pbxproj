@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1876376A15A248C6004F1598 /* SDNestedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876376915A248C6004F1598 /* SDNestedTableViewController.m */; };
 		1876376C15A249C1004F1598 /* SDNestedTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1876376B15A249C1004F1598 /* SDNestedTableView.xib */; };
+		24584A0518859DCD00AD1177 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24584A0418859DCD00AD1177 /* Default-568h@2x.png */; };
 		24A9455D187F498A00362C51 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A9455C187F498A00362C51 /* google.png */; };
 		24A9455F187F4A1000362C51 /* shinsekai.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A9455E187F4A1000362C51 /* shinsekai.png */; };
 		24A945671880990F00362C51 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945661880990F00362C51 /* AudioToolbox.framework */; };
@@ -76,6 +77,10 @@
 		24A9470218809ECB00362C51 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 24A9465F18809ECA00362C51 /* utils.c */; };
 		24A9471C1880A20200362C51 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A9471B1880A20200362C51 /* NSData+ImageContentType.m */; };
 		24A9471E1880A27E00362C51 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9471D1880A27E00362C51 /* ImageIO.framework */; };
+		24A9478118859AE200362C51 /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A9477018859AE100362C51 /* LBYouTubeExtractor.m */; };
+		24A9478218859AE200362C51 /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A9477218859AE100362C51 /* LBYouTubePlayerViewController.m */; };
+		24A9478C18859C5900362C51 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9478B18859C5900362C51 /* JavaScriptCore.framework */; };
+		24A9478E18859C6600362C51 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9478D18859C6600362C51 /* MediaPlayer.framework */; };
 		8B8EB7E6156A74B00061CF0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E5156A74B00061CF0C /* UIKit.framework */; };
 		8B8EB7E8156A74B00061CF0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E7156A74B00061CF0C /* Foundation.framework */; };
 		8B8EB7EA156A74B00061CF0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E9156A74B00061CF0C /* CoreGraphics.framework */; };
@@ -103,6 +108,7 @@
 		1876376815A248C6004F1598 /* SDNestedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDNestedTableViewController.h; path = SDNestedTablesExample/Classes/SDNestedTableViewController.h; sourceTree = SOURCE_ROOT; };
 		1876376915A248C6004F1598 /* SDNestedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDNestedTableViewController.m; path = SDNestedTablesExample/Classes/SDNestedTableViewController.m; sourceTree = SOURCE_ROOT; };
 		1876376B15A249C1004F1598 /* SDNestedTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SDNestedTableView.xib; path = SDNestedTablesExample/Nibs/SDNestedTableView.xib; sourceTree = SOURCE_ROOT; };
+		24584A0418859DCD00AD1177 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "SDNestedTablesExample/Default-568h@2x.png"; sourceTree = "<group>"; };
 		24A9455C187F498A00362C51 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
 		24A9455E187F4A1000362C51 /* shinsekai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shinsekai.png; sourceTree = "<group>"; };
 		24A945661880990F00362C51 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -207,6 +213,13 @@
 		24A9471A1880A20200362C51 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		24A9471B1880A20200362C51 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		24A9471D1880A27E00362C51 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		24A9476E18859AE100362C51 /* LBYouTube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTube.h; sourceTree = "<group>"; };
+		24A9476F18859AE100362C51 /* LBYouTubeExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubeExtractor.h; sourceTree = "<group>"; };
+		24A9477018859AE100362C51 /* LBYouTubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeExtractor.m; sourceTree = "<group>"; };
+		24A9477118859AE100362C51 /* LBYouTubePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerViewController.h; sourceTree = "<group>"; };
+		24A9477218859AE100362C51 /* LBYouTubePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubePlayerViewController.m; sourceTree = "<group>"; };
+		24A9478B18859C5900362C51 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		24A9478D18859C6600362C51 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8B8EB7E1156A74B00061CF0C /* SDNestedTablesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDNestedTablesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8EB7E5156A74B00061CF0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B8EB7E7156A74B00061CF0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -243,6 +256,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A9478E18859C6600362C51 /* MediaPlayer.framework in Frameworks */,
+				24A9478C18859C5900362C51 /* JavaScriptCore.framework in Frameworks */,
 				24A9471E1880A27E00362C51 /* ImageIO.framework in Frameworks */,
 				24A945771880995100362C51 /* SystemConfiguration.framework in Frameworks */,
 				24A945751880994A00362C51 /* StoreKit.framework in Frameworks */,
@@ -266,6 +281,7 @@
 		24A9458018809ECA00362C51 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				24A9476A18859AE100362C51 /* LBYouTubeView */,
 				24A9458118809ECA00362C51 /* SDWebImage */,
 			);
 			path = lib;
@@ -421,6 +437,26 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		24A9476A18859AE100362C51 /* LBYouTubeView */ = {
+			isa = PBXGroup;
+			children = (
+				24A9476D18859AE100362C51 /* LBYouTubeView */,
+			);
+			path = LBYouTubeView;
+			sourceTree = "<group>";
+		};
+		24A9476D18859AE100362C51 /* LBYouTubeView */ = {
+			isa = PBXGroup;
+			children = (
+				24A9476E18859AE100362C51 /* LBYouTube.h */,
+				24A9476F18859AE100362C51 /* LBYouTubeExtractor.h */,
+				24A9477018859AE100362C51 /* LBYouTubeExtractor.m */,
+				24A9477118859AE100362C51 /* LBYouTubePlayerViewController.h */,
+				24A9477218859AE100362C51 /* LBYouTubePlayerViewController.m */,
+			);
+			path = LBYouTubeView;
+			sourceTree = "<group>";
+		};
 		8B720524159CABEB006BC732 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -503,6 +539,8 @@
 		8B8EB7E4156A74B00061CF0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24A9478D18859C6600362C51 /* MediaPlayer.framework */,
+				24A9478B18859C5900362C51 /* JavaScriptCore.framework */,
 				24A9471D1880A27E00362C51 /* ImageIO.framework */,
 				24A945781880998A00362C51 /* Parse.framework */,
 				24A945761880995100362C51 /* SystemConfiguration.framework */,
@@ -536,6 +574,7 @@
 		8BB989EA1599D4DC0028D9F7 /* SDNestedTables */ = {
 			isa = PBXGroup;
 			children = (
+				24584A0418859DCD00AD1177 /* Default-568h@2x.png */,
 				24A9455C187F498A00362C51 /* google.png */,
 				24A9455E187F4A1000362C51 /* shinsekai.png */,
 				8B72263D159A1DE3001B28C5 /* Classes */,
@@ -572,6 +611,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					8B8EB7E0156A74B00061CF0C = {
+						DevelopmentTeam = DE426KN43G;
+					};
+				};
 			};
 			buildConfigurationList = 8B8EB7DB156A74B00061CF0C /* Build configuration list for PBXProject "SDNestedTablesExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -608,6 +652,7 @@
 				8BA40482159E212400F3D367 /* disclosure.png in Resources */,
 				8BA40483159E212400F3D367 /* disclosure@2x.png in Resources */,
 				8BA40487159E212A00F3D367 /* SDGroupCell.xib in Resources */,
+				24584A0518859DCD00AD1177 /* Default-568h@2x.png in Resources */,
 				24A946C518809ECB00362C51 /* Makefile.am in Resources */,
 				8BA40489159E212A00F3D367 /* SDSubCell.xib in Resources */,
 				8BA40493159E214E00F3D367 /* InfoPlist.strings in Resources */,
@@ -641,6 +686,7 @@
 				24A946F818809ECB00362C51 /* color_cache.c in Sources */,
 				24A946C918809ECB00362C51 /* vp8l.c in Sources */,
 				24A9457F18809A9300362C51 /* WatiBConstants.m in Sources */,
+				24A9478218859AE200362C51 /* LBYouTubePlayerViewController.m in Sources */,
 				24A946D218809ECB00362C51 /* enc.c in Sources */,
 				24A946FB18809ECB00362C51 /* huffman_encode.c in Sources */,
 				8BA40497159E216200F3D367 /* SDSubCell.m in Sources */,
@@ -668,6 +714,7 @@
 				24A946D018809ECB00362C51 /* dec_neon.c in Sources */,
 				24A946C818809ECB00362C51 /* vp8.c in Sources */,
 				24A946FD18809ECB00362C51 /* quant_levels.c in Sources */,
+				24A9478118859AE200362C51 /* LBYouTubeExtractor.m in Sources */,
 				24A9468B18809ECA00362C51 /* SDWebImagePrefetcher.m in Sources */,
 				24A9468C18809ECA00362C51 /* UIButton+WebCache.m in Sources */,
 				24A9469018809ECA00362C51 /* UIImageView+WebCache.m in Sources */,
@@ -748,6 +795,7 @@
 		8B8EB800156A74B00061CF0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Francois-julien alcaraz (BN4YKZXXGD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/fj/Downloads/ios-SDNestedTable-master/**",
@@ -758,6 +806,7 @@
 				INFOPLIST_FILE = "SDNestedTablesExample/SDNestedTables-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = SDNestedTablesExample;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -766,6 +815,7 @@
 		8B8EB801156A74B00061CF0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Francois-julien alcaraz (BN4YKZXXGD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/fj/Downloads/ios-SDNestedTable-master/**",

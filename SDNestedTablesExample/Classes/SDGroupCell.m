@@ -9,6 +9,8 @@
 #import "SDGroupCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SDNestedTableViewController.h"
+#import "WebViewController.h"
+#import "LBYouTube.h"
 
 @implementation SDGroupCell
 
@@ -205,7 +207,20 @@
         cell = (SDSubCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
     }
     
-    [self toggleCell:cell atIndexPath:indexPath];
+//    [self toggleCell:cell atIndexPath:indexPath];
+    
+//    WebViewController * webController = [[WebViewController alloc] init];
+//    webController.stringURL = [cell.songObject objectForKey:@"link"];
+//    webController.youTubeID = [cell.songObject objectForKey:@"youtube_id"];
+//    [self.parentTable.navigationController pushViewController:webController animated:YES];
+    
+    // Setup the player controller and add it's view as a subview:
+    
+    LBYouTubePlayerViewController* controller = [[LBYouTubePlayerViewController alloc] initWithYouTubeURL:[NSURL URLWithString:[cell.songObject objectForKey:@"link"]] quality:LBYouTubeVideoQualityLarge];
+    controller.delegate = self;
+    
+    [self.parentTable presentViewController:controller animated:YES completion:nil];
+
 }
 
 

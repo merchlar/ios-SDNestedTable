@@ -17,13 +17,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    NSString* userAgent = @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19";
+
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:userAgent, @"UserAgent", nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
+    
     [Parse setApplicationId:@"KlEY7oBc4M78XYmmQH6hY0HSX8MVK2You8VYgCUQ"
                   clientKey:@"KRJzH78w9O4LS9EbBY17ceCvCb6NMeWPuhBMO4We"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+
+    
     ExampleNestedTablesViewController *nestedNav = [[ExampleNestedTablesViewController alloc] init];
-    self.window.rootViewController = nestedNav;
+    
+    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:nestedNav];
+    
+    self.window.rootViewController = navController;
     
     [self.window makeKeyAndVisible];
     

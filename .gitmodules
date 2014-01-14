@@ -1,3 +1,6 @@
 [submodule "lib/SDWebImage"]
 	path = lib/SDWebImage
 	url = https://github.com/rs/SDWebImage
+[submodule "lib/LBYouTubeView"]
+	path = lib/LBYouTubeView
+	url = https://github.com/MarcosSTM/LBYouTubeView

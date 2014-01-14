@@ -125,6 +125,7 @@
     NSNumber * songOrder = [[[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row] objectForKey:@"order"];
 
     subItem.itemText.text = [NSString stringWithFormat:@"%d - %@", [songOrder intValue], songTitle];
+    subItem.songObject = [[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row];
     return subItem;
 }
 

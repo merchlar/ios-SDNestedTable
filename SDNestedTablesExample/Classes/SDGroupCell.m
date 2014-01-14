@@ -9,7 +9,6 @@
 #import "SDGroupCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SDNestedTableViewController.h"
-#import "WebViewController.h"
 #import "LBYouTube.h"
 
 @implementation SDGroupCell

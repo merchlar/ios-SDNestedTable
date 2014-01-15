@@ -10,6 +10,7 @@
 #import "WatiBParseManager.h"
 #import <Parse/Parse.h>
 #import "UIImageView+WebCache.h"
+#import "WatiBAppStoreButton.h"
 
 @interface ExampleNestedTablesViewController ()
 
@@ -68,11 +69,82 @@
         else {
             //Error download
             NSLog(@"Download Player Error %@", error);
-            
+            [self showCustomErrorWithText:@"Impossible de recevoir les données du serveur. SVP vérifier votre connexion et ressayer."];
         }
         
         
-    }];
+    }
+   customErrorBlock:^(NSString *type, NSString *text, NSString *appStoreURL) {
+       
+       self.items = nil;
+       
+       // HANDLE CUSTOM ERRORS HERE
+       
+       if ([type isEqualToString:@"update-app"]) {
+           [self showUpdateAppWithText:text andURL:appStoreURL];
+       }
+       else if ([type isEqualToString:@"custom"]) {
+           [self showCustomErrorWithText:text];
+
+       }
+       
+       
+   }];
+    
+}
+
+- (void)showCustomErrorWithText:(NSString *)errorText {
+    
+    UIView * errorView = [[[NSBundle mainBundle] loadNibNamed:@"WatiBPlayerError" owner:self options:nil] objectAtIndex:0];
+    
+    UILabel * errorLabel = (UILabel *)[errorView viewWithTag:1];
+    
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:errorText];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:10];
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [errorText length])];
+    errorLabel.attributedText = attributedString;
+    
+//    [errorLabel setText:errorText];
+    
+    WatiBAppStoreButton * appStoreButton = (WatiBAppStoreButton *)[errorView viewWithTag:2];
+    
+    appStoreButton.hidden = YES;
+    
+    [errorView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
+    
+    [self.tableView addSubview:errorView];
+    
+    [errorView setFrame:self.tableView.bounds];
+    
+}
+
+- (void)showUpdateAppWithText:(NSString *)updateText andURL:(NSString *)appStoreURL {
+    
+    UIView * errorView = [[[NSBundle mainBundle] loadNibNamed:@"WatiBPlayerError" owner:self options:nil] objectAtIndex:0];
+    
+    UILabel * errorLabel = (UILabel *)[errorView viewWithTag:1];
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:updateText];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:10];
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [updateText length])];
+    errorLabel.attributedText = attributedString;
+    
+//    [errorLabel setText:updateText];
+    
+    WatiBAppStoreButton * appStoreButton = (WatiBAppStoreButton *)[errorView viewWithTag:2];
+    
+    appStoreButton.appStoreURL = appStoreURL;
+    
+    [errorView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
+    
+    [self.tableView addSubview:errorView];
+    
+    [errorView setFrame:self.tableView.bounds];
     
 }
 
@@ -91,6 +163,10 @@
     NSArray * songs = [artist objectForKey:@"songs"];
     
     NSLog(@"%d songs for artist %@", [songs count], [artist objectForKey:@"name"]);
+    
+    if ([songs count] == 0) {
+        return 1;
+    }
     
     return [songs count];
     
@@ -126,6 +202,9 @@
 //                               if ([self.loader isAnimating]) {
 //                                   [self.loader stopAnimating];
 //                               }
+                               if (error) {
+                                   [self showCustomErrorWithText:@"Impossible de télécharger les images. SVP vérifier votre connexion et ressayer."];
+                               }
                                
                            }];
     
@@ -136,11 +215,16 @@
 - (SDSubCell *)item:(SDGroupCell *)item setSubItem:(SDSubCell *)subItem forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSString * songTitle = [[[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row] objectForKey:@"name"];
-    NSNumber * songOrder = [[[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row] objectForKey:@"order"];
+    if ([[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] count] == 0) {
+        subItem.itemText.text = @"Pas de musiques disponible pour cet artiste.";
+    }
+    else {
+        NSString * songTitle = [[[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row] objectForKey:@"name"];
+        NSNumber * songOrder = [[[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row] objectForKey:@"order"];
 
-    subItem.itemText.text = [NSString stringWithFormat:@"%d - %@", [songOrder intValue], songTitle];
-    subItem.songObject = [[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row];
+        subItem.itemText.text = [NSString stringWithFormat:@"%d - %@", [songOrder intValue], songTitle];
+        subItem.songObject = [[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row];
+    }
     return subItem;
 }
 

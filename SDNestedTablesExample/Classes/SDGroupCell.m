@@ -198,6 +198,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+    
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     SDSubCell *cell = (SDSubCell *)[tableView cellForRowAtIndexPath:indexPath];
@@ -207,18 +209,15 @@
     }
     
 //    [self toggleCell:cell atIndexPath:indexPath];
+
     
-//    WebViewController * webController = [[WebViewController alloc] init];
-//    webController.stringURL = [cell.songObject objectForKey:@"link"];
-//    webController.youTubeID = [cell.songObject objectForKey:@"youtube_id"];
-//    [self.parentTable.navigationController pushViewController:webController animated:YES];
-    
-    // Setup the player controller and add it's view as a subview:
-    
-    LBYouTubePlayerViewController* controller = [[LBYouTubePlayerViewController alloc] initWithYouTubeURL:[NSURL URLWithString:[cell.songObject objectForKey:@"link"]] quality:LBYouTubeVideoQualityLarge];
-    controller.delegate = self;
-    
-    [self.parentTable presentViewController:controller animated:YES completion:nil];
+    if (cell.songObject) {
+        LBYouTubePlayerViewController* controller = [[LBYouTubePlayerViewController alloc] initWithYouTubeURL:[NSURL URLWithString:[cell.songObject objectForKey:@"link"]] quality:LBYouTubeVideoQualityLarge];
+        controller.delegate = self;
+        
+        [self.parentTable presentViewController:controller animated:YES completion:nil];
+    }
+
 
 }
 
@@ -282,6 +281,23 @@
             break;
     }
     [self.parentTable groupCell:self didSelectSubCell:cell withIndexPath:pathToToggle andWithTap:cellTapped];
+}
+
+#pragma mark LBYouTubePlayerViewControllerDelegate
+
+-(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller didSuccessfullyExtractYouTubeURL:(NSURL *)videoURL {
+    NSLog(@"Did extract video source:%@", videoURL);
+}
+
+-(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller failedExtractingYouTubeURLWithError:(NSError *)error {
+    NSLog(@"Failed loading video due to error:%@", error);
+    
+    UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Erreur"
+                                                         message:@"Impossible de lire cette video à partir de YouTube"
+                                                        delegate:nil
+                                               cancelButtonTitle:nil
+                                               otherButtonTitles:@"OK", nil];
+    [alertView show];
 }
 
 @end

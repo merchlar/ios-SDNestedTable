@@ -16,6 +16,7 @@
 @property (nonatomic, copy) WatiBARResultBlock currentARResultBlock;
 @property (nonatomic, copy) WatiBTIResultBlock currentTIResultBlock;
 @property (nonatomic, copy) WatiBPlayerResultBlock currentPlayerResultBlock;
+@property (nonatomic, copy) WatiBPlayerCustomErrorBlock currentPlayerCustomErrorBlock;
 
 @property (nonatomic,assign) float arXMLPercentage;
 @property (nonatomic,assign) float arDATPercentage;
@@ -70,18 +71,87 @@
     
 }
 
-- (void)startDownloadPlayerInBackgroundWithBlock:(__strong WatiBPlayerResultBlock)resultBlock {
+- (void)startDownloadPlayerInBackgroundWithBlock:(__strong WatiBPlayerResultBlock)resultBlock
+                                customErrorBlock:(__strong WatiBPlayerCustomErrorBlock)customErrorBlock {
     
     self.currentPlayerResultBlock = resultBlock;
+    self.currentPlayerCustomErrorBlock = customErrorBlock;
     
-    [self startDownloadPlayer];
+    [self startDownloadPlayerError];
+    
+}
+
+
+
+#pragma mark Player Download methods
+
+- (void)startDownloadPlayerError {
+    
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"PlayerError"];
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"WatiBParseManager : DownloadPlayerError Successfully retrieved %d objects.", objects.count);
+            
+            BOOL customError = NO;
+            for (PFObject * obj in objects) {
+                
+                NSLog(@"version : %@", [obj objectForKey:@"version"]);
+                
+                float objectVersion = [[obj objectForKey:@"version"] floatValue];
+                float appVersion = 1.1;
+                
+                if (objectVersion == appVersion) {
+//                if ([(NSNumber *)[obj objectForKey:@"version"] isEqualToNumber:[NSNumber numberWithFloat:1.1]]) {
+                    NSLog(@"version 1.1");
+                    if ([(NSNumber *)[obj objectForKey:@"enable"] boolValue]) {
+                        NSLog(@"enable YES");
+
+                        if ([[obj objectForKey:@"type"] isEqualToString:@"custom"]) {
+                            NSLog(@"custom");
+
+                            customError = YES;
+                            NSString * errorText = [obj objectForKey:@"text"];
+                            
+                            self.currentPlayerCustomErrorBlock([obj objectForKey:@"type"], errorText, nil);
+                            return;
+                            
+                        }
+                        else if ([[obj objectForKey:@"type"] isEqualToString:@"update-app"]) {
+                            NSLog(@"update app");
+
+                            customError = YES;
+                            NSString * errorText = [obj objectForKey:@"text"];
+                            NSString * appStoreURL = [obj objectForKey:@"app_store_url"];
+                            self.currentPlayerCustomErrorBlock([obj objectForKey:@"type"], errorText, appStoreURL);
+                            return;
+
+                        }
+                    }
+                }
+            }
+            
+            if (!customError) {
+                [self startDownloadPlayerData];
+            }
+            
+            
+        } else {
+            // Log details of the failure
+            NSLog(@"WatiBParseManager : DownloadPlayerError Error: %@ + %@", error, [error userInfo]);
+            
+            self.currentPlayerResultBlock(nil, error);
+            
+        }
+    }];
     
     
 }
 
-#pragma mark Player Download methods
-
-- (void)startDownloadPlayer {
+- (void)startDownloadPlayerData {
     
     
     PFQuery *query = [PFQuery queryWithClassName:@"PlayerArtists"];
@@ -91,7 +161,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
-            NSLog(@"WatiBParseManager : DownloadPlayer Successfully retrieved %d objects.", objects.count);
+            NSLog(@"WatiBParseManager : DownloadPlayerArtists Successfully retrieved %d objects.", objects.count);
             
             NSMutableArray * temp = [NSMutableArray array];
             
@@ -106,7 +176,7 @@
             
         } else {
             // Log details of the failure
-            NSLog(@"WatiBParseManager : DownloadTI Error: %@ + %@", error, [error userInfo]);
+            NSLog(@"WatiBParseManager : DownloadPlayerArtists Error: %@ + %@", error, [error userInfo]);
             
             self.currentPlayerResultBlock(nil, error);
             

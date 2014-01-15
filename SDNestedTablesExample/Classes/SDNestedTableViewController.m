@@ -236,6 +236,9 @@
     [cell subCellsToggleCheck];
     
     [self mainItemDidChange:cell forTap:YES];
+    
+//    [self.tableView scrollToRowAtIndexPath:pathToToggle atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+//    [self.tableView scrollToNearestSelectedRowAtScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 #pragma mark - Nested Tables events

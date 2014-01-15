@@ -7,6 +7,7 @@
 //
 
 #import "SDNestedTableViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ExampleNestedTablesViewController : SDNestedTableViewController
 

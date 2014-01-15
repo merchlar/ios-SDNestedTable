@@ -18,7 +18,8 @@
 
 - (void)startDownloadTIInBackgroundWithBlock:(__strong WatiBTIResultBlock)resultBlock;
 
-- (void)startDownloadPlayerInBackgroundWithBlock:(__strong WatiBPlayerResultBlock)resultBlock;
+- (void)startDownloadPlayerInBackgroundWithBlock:(__strong WatiBPlayerResultBlock)resultBlock
+                                customErrorBlock:(__strong WatiBPlayerCustomErrorBlock)customErrorBlock;
 
 
 @end

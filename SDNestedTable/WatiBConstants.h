@@ -14,7 +14,7 @@ typedef void (^WatiBARResultBlock)(NSArray *array, NSError *error);
 typedef void (^WatiBTIResultBlock)(NSArray *array, NSError *error);
 
 typedef void (^WatiBPlayerResultBlock)(NSArray *array, NSError *error);
-
+typedef void (^WatiBPlayerCustomErrorBlock)(NSString *type, NSString *text, NSString *appStoreURL);
 
 typedef void (^WatiBProgressBlock)(float percentDone);
 typedef void (^WatiBArrayResultBlock)(NSArray *array, NSError *error);

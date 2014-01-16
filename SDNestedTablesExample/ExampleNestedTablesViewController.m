@@ -50,6 +50,10 @@
 
 }
 
+- (void)awakeFromNib {
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.223529F green:0.223529F blue:0.223529F alpha:1.0F]];
+}
+
 #pragma mark - Methods
 
 - (void)fetchData {

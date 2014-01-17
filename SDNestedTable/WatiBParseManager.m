@@ -157,7 +157,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"PlayerArtists"];
     query.cachePolicy = kPFCachePolicyNetworkElseCache;
     [query includeKey:@"songs"];
-    
+    [query orderByAscending:@"order"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.

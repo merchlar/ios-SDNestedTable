@@ -50,9 +50,6 @@
 
 }
 
-- (void)awakeFromNib {
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.223529F green:0.223529F blue:0.223529F alpha:1.0F]];
-}
 
 #pragma mark - Methods
 
@@ -226,7 +223,7 @@
         NSString * songTitle = [[[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row] objectForKey:@"name"];
         NSNumber * songOrder = [[[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row] objectForKey:@"order"];
 
-        subItem.itemText.text = [NSString stringWithFormat:@"%d - %@", [songOrder intValue], songTitle];
+        subItem.itemText.text = [NSString stringWithFormat:@"%d   %@", [songOrder intValue], songTitle];
         subItem.songObject = [[[self.items objectAtIndex:item.cellIndexPath.row] objectForKey:@"songs"] objectAtIndex:indexPath.row];
     }
     return subItem;

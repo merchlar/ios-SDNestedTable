@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SDSubCell.h"
 #import "SDSelectableCell.h"
+#import <Parse/Parse.h>
 
 typedef enum {
     AllSubCellsCommandChecked,
@@ -33,6 +34,8 @@ static const int subCellHeight = 40;
 @property (nonatomic, strong) NSMutableDictionary *selectableSubCellsState;
 @property (strong) NSIndexPath *cellIndexPath;
 @property (weak, nonatomic) IBOutlet UIImageView *artistImageView;
+
+@property (nonatomic,strong) PFObject * artistObject;
 
 - (void) subCellsToggleCheck;
 - (void) rotateExpandBtn:(id)sender;

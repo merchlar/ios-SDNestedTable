@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 #import "UIImageView+WebCache.h"
 #import "WatiBAppStoreButton.h"
+#import "Flurry.h"
 
 @interface ExampleNestedTablesViewController ()
 
@@ -39,6 +40,9 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    [Flurry logEvent:@"WATI_SONS_VIEW"];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -191,6 +195,7 @@
 {
     PFObject * object = [self.items objectAtIndex:indexPath.row];
 
+    item.artistObject = object;
     
     NSString * url = [(PFFile *)[object objectForKey:@"banner_iphone"] url];
 

@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SDNestedTableViewController.h"
 #import "LBYouTube.h"
-
+#import "Flurry.h"
 @implementation SDGroupCell
 
 @synthesize isExpanded, subTable, subCell, subCellsAmt, selectedSubCellsAmt, selectableSubCellsState, cellIndexPath;
@@ -211,9 +211,15 @@
 //    [self toggleCell:cell atIndexPath:indexPath];
 
     
+
+    
     if (cell.songObject) {
         LBYouTubePlayerViewController* controller = [[LBYouTubePlayerViewController alloc] initWithYouTubeURL:[NSURL URLWithString:[cell.songObject objectForKey:@"link"]] quality:LBYouTubeVideoQualityLarge];
         controller.delegate = self;
+        
+//        [Flurry logEvent:@"WATI_SONS_VIDEO_LAUNCH" withParameters:[NSDictionary dictionaryWithObject:[cell.songObject objectForKey:@"link"] forKey:@"name"]];
+        [Flurry logEvent:@"WATI_SONS_VIDEO_LAUNCH" withParameters:[NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:[cell.songObject objectForKey:@"link"], [self.artistObject objectForKey:@"name"], nil] forKeys:[NSArray arrayWithObjects:@"link", @"artist", nil]]];
+
         
         [self.parentTable presentViewController:controller animated:YES completion:nil];
     }

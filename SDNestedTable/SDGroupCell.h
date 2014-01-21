@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SDSubCell.h"
 #import "SDSelectableCell.h"
+#import <Parse/Parse.h>
 
 typedef enum {
     AllSubCellsCommandChecked,
@@ -16,7 +17,7 @@ typedef enum {
     AllSubCellsCommandNone,
 } AllSubCellsCommand;
 
-static const int height = 50;
+static const int height = 168;
 static const int subCellHeight = 40;
 
 @interface SDGroupCell : SDSelectableCell <UITableViewDelegate, UITableViewDataSource>
@@ -32,6 +33,9 @@ static const int subCellHeight = 40;
 @property (assign) int selectedSubCellsAmt;
 @property (nonatomic, strong) NSMutableDictionary *selectableSubCellsState;
 @property (strong) NSIndexPath *cellIndexPath;
+@property (weak, nonatomic) IBOutlet UIImageView *artistImageView;
+
+@property (nonatomic,strong) PFObject * artistObject;
 
 - (void) subCellsToggleCheck;
 - (void) rotateExpandBtn:(id)sender;

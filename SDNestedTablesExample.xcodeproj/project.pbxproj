@@ -7,11 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1876376A15A248C6004F1598 /* SDNestedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876376915A248C6004F1598 /* SDNestedTableViewController.m */; };
-		1876376C15A249C1004F1598 /* SDNestedTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1876376B15A249C1004F1598 /* SDNestedTableView.xib */; };
-		24584A0518859DCD00AD1177 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24584A0418859DCD00AD1177 /* Default-568h@2x.png */; };
-		24A9455D187F498A00362C51 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A9455C187F498A00362C51 /* google.png */; };
-		24A9455F187F4A1000362C51 /* shinsekai.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A9455E187F4A1000362C51 /* shinsekai.png */; };
+		24A46E4D188ED34100C059E7 /* blueLedBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E39188ED34100C059E7 /* blueLedBig.png */; };
+		24A46E4E188ED34100C059E7 /* blueLedBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E3A188ED34100C059E7 /* blueLedBig@2x.png */; };
+		24A46E4F188ED34100C059E7 /* blueLedBigOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E3B188ED34100C059E7 /* blueLedBigOff.png */; };
+		24A46E50188ED34100C059E7 /* blueLedSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E3C188ED34100C059E7 /* blueLedSmall.png */; };
+		24A46E51188ED34100C059E7 /* blueLedSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E3D188ED34100C059E7 /* blueLedSmall@2x.png */; };
+		24A46E52188ED34100C059E7 /* blueLedSmallOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E3E188ED34100C059E7 /* blueLedSmallOff.png */; };
+		24A46E53188ED34100C059E7 /* blueLedSmallOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E3F188ED34100C059E7 /* blueLedSmallOff@2x.png */; };
+		24A46E54188ED34100C059E7 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E40188ED34100C059E7 /* disclosure.png */; };
+		24A46E55188ED34100C059E7 /* disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E41188ED34100C059E7 /* disclosure@2x.png */; };
+		24A46E56188ED34100C059E7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E42188ED34100C059E7 /* Default-568h@2x.png */; };
+		24A46E59188ED34100C059E7 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E47188ED34100C059E7 /* google.png */; };
+		24A46E5C188ED34100C059E7 /* shinsekai.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E4B188ED34100C059E7 /* shinsekai.png */; };
+		24A46E71188ED36600C059E7 /* SDGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E5F188ED36600C059E7 /* SDGroupCell.xib */; };
+		24A46E72188ED36600C059E7 /* SDNestedTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E60188ED36600C059E7 /* SDNestedTableView.xib */; };
+		24A46E73188ED36600C059E7 /* SDSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E61188ED36600C059E7 /* SDSubCell.xib */; };
+		24A46E74188ED36600C059E7 /* WatiBPlayerError.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E62188ED36600C059E7 /* WatiBPlayerError.xib */; };
+		24A46E75188ED36600C059E7 /* SDGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A46E64188ED36600C059E7 /* SDGroupCell.m */; };
+		24A46E76188ED36600C059E7 /* SDNestedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A46E66188ED36600C059E7 /* SDNestedTableViewController.m */; };
+		24A46E77188ED36600C059E7 /* SDSelectableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A46E68188ED36600C059E7 /* SDSelectableCell.m */; };
+		24A46E78188ED36600C059E7 /* SDSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A46E6A188ED36600C059E7 /* SDSubCell.m */; };
+		24A46E79188ED36600C059E7 /* WatiBAppStoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A46E6C188ED36600C059E7 /* WatiBAppStoreButton.m */; };
+		24A46E7A188ED36600C059E7 /* WatiBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A46E6E188ED36600C059E7 /* WatiBConstants.m */; };
+		24A46E7B188ED36600C059E7 /* WatiBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A46E70188ED36600C059E7 /* WatiBParseManager.m */; };
+		24A46E7F188ED43100C059E7 /* libFlurry_4.3.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A46E7E188ED43100C059E7 /* libFlurry_4.3.1.a */; };
+		24A46E85188ED69800C059E7 /* error-icon-large@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E81188ED69700C059E7 /* error-icon-large@2x~ipad.png */; };
+		24A46E86188ED69800C059E7 /* error-icon-large@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E82188ED69700C059E7 /* error-icon-large@2x~iphone.png */; };
+		24A46E87188ED69800C059E7 /* error-icon-large~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E83188ED69700C059E7 /* error-icon-large~ipad.png */; };
+		24A46E88188ED69800C059E7 /* error-icon-large~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A46E84188ED69800C059E7 /* error-icon-large~iphone.png */; };
 		24A945671880990F00362C51 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945661880990F00362C51 /* AudioToolbox.framework */; };
 		24A945691880991600362C51 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945681880991600362C51 /* CFNetwork.framework */; };
 		24A9456B1880992600362C51 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9456A1880992600362C51 /* CoreLocation.framework */; };
@@ -22,8 +45,6 @@
 		24A945751880994A00362C51 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945741880994A00362C51 /* StoreKit.framework */; };
 		24A945771880995100362C51 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945761880995100362C51 /* SystemConfiguration.framework */; };
 		24A945791880998A00362C51 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A945781880998A00362C51 /* Parse.framework */; };
-		24A9457C18809A7F00362C51 /* WatiBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A9457A18809A7F00362C51 /* WatiBParseManager.m */; };
-		24A9457F18809A9300362C51 /* WatiBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A9457E18809A9300362C51 /* WatiBConstants.m */; };
 		24A9468518809ECA00362C51 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A945A418809ECA00362C51 /* SDImageCache.m */; };
 		24A9468618809ECA00362C51 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A945A618809ECA00362C51 /* SDWebImageCompat.m */; };
 		24A9468718809ECA00362C51 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A945A818809ECA00362C51 /* SDWebImageDecoder.m */; };
@@ -84,33 +105,49 @@
 		8B8EB7E6156A74B00061CF0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E5156A74B00061CF0C /* UIKit.framework */; };
 		8B8EB7E8156A74B00061CF0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E7156A74B00061CF0C /* Foundation.framework */; };
 		8B8EB7EA156A74B00061CF0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E9156A74B00061CF0C /* CoreGraphics.framework */; };
-		8BA4047B159E212400F3D367 /* blueLedBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40472159E212400F3D367 /* blueLedBig.png */; };
-		8BA4047C159E212400F3D367 /* blueLedBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40473159E212400F3D367 /* blueLedBig@2x.png */; };
-		8BA4047D159E212400F3D367 /* blueLedBigOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40474159E212400F3D367 /* blueLedBigOff.png */; };
-		8BA4047E159E212400F3D367 /* blueLedSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40475159E212400F3D367 /* blueLedSmall.png */; };
-		8BA4047F159E212400F3D367 /* blueLedSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40476159E212400F3D367 /* blueLedSmall@2x.png */; };
-		8BA40480159E212400F3D367 /* blueLedSmallOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40477159E212400F3D367 /* blueLedSmallOff.png */; };
-		8BA40481159E212400F3D367 /* blueLedSmallOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40478159E212400F3D367 /* blueLedSmallOff@2x.png */; };
-		8BA40482159E212400F3D367 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40479159E212400F3D367 /* disclosure.png */; };
-		8BA40483159E212400F3D367 /* disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA4047A159E212400F3D367 /* disclosure@2x.png */; };
-		8BA40487159E212A00F3D367 /* SDGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40484159E212A00F3D367 /* SDGroupCell.xib */; };
-		8BA40489159E212A00F3D367 /* SDSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40486159E212A00F3D367 /* SDSubCell.xib */; };
 		8BA40493159E214E00F3D367 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40491159E214E00F3D367 /* InfoPlist.strings */; };
-		8BA40495159E215D00F3D367 /* SDSelectableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4046F159E211A00F3D367 /* SDSelectableCell.m */; };
-		8BA40496159E215F00F3D367 /* SDGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4046D159E211A00F3D367 /* SDGroupCell.m */; };
-		8BA40497159E216200F3D367 /* SDSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA40471159E211A00F3D367 /* SDSubCell.m */; };
 		8BA40498159E216700F3D367 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4048B159E213800F3D367 /* AppDelegate.m */; };
 		8BA40499159E216B00F3D367 /* ExampleNestedTablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4048D159E213800F3D367 /* ExampleNestedTablesViewController.m */; };
 		8BA4049A159E216F00F3D367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4048E159E214A00F3D367 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1876376815A248C6004F1598 /* SDNestedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDNestedTableViewController.h; path = SDNestedTablesExample/Classes/SDNestedTableViewController.h; sourceTree = SOURCE_ROOT; };
-		1876376915A248C6004F1598 /* SDNestedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDNestedTableViewController.m; path = SDNestedTablesExample/Classes/SDNestedTableViewController.m; sourceTree = SOURCE_ROOT; };
-		1876376B15A249C1004F1598 /* SDNestedTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SDNestedTableView.xib; path = SDNestedTablesExample/Nibs/SDNestedTableView.xib; sourceTree = SOURCE_ROOT; };
-		24584A0418859DCD00AD1177 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "SDNestedTablesExample/Default-568h@2x.png"; sourceTree = "<group>"; };
-		24A9455C187F498A00362C51 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
-		24A9455E187F4A1000362C51 /* shinsekai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shinsekai.png; sourceTree = "<group>"; };
+		24A46E39188ED34100C059E7 /* blueLedBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueLedBig.png; sourceTree = "<group>"; };
+		24A46E3A188ED34100C059E7 /* blueLedBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueLedBig@2x.png"; sourceTree = "<group>"; };
+		24A46E3B188ED34100C059E7 /* blueLedBigOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueLedBigOff.png; sourceTree = "<group>"; };
+		24A46E3C188ED34100C059E7 /* blueLedSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueLedSmall.png; sourceTree = "<group>"; };
+		24A46E3D188ED34100C059E7 /* blueLedSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueLedSmall@2x.png"; sourceTree = "<group>"; };
+		24A46E3E188ED34100C059E7 /* blueLedSmallOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueLedSmallOff.png; sourceTree = "<group>"; };
+		24A46E3F188ED34100C059E7 /* blueLedSmallOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueLedSmallOff@2x.png"; sourceTree = "<group>"; };
+		24A46E40188ED34100C059E7 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
+		24A46E41188ED34100C059E7 /* disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure@2x.png"; sourceTree = "<group>"; };
+		24A46E42188ED34100C059E7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		24A46E47188ED34100C059E7 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
+		24A46E4B188ED34100C059E7 /* shinsekai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shinsekai.png; sourceTree = "<group>"; };
+		24A46E5F188ED36600C059E7 /* SDGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGroupCell.xib; sourceTree = "<group>"; };
+		24A46E60188ED36600C059E7 /* SDNestedTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDNestedTableView.xib; sourceTree = "<group>"; };
+		24A46E61188ED36600C059E7 /* SDSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDSubCell.xib; sourceTree = "<group>"; };
+		24A46E62188ED36600C059E7 /* WatiBPlayerError.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatiBPlayerError.xib; sourceTree = "<group>"; };
+		24A46E63188ED36600C059E7 /* SDGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGroupCell.h; sourceTree = "<group>"; };
+		24A46E64188ED36600C059E7 /* SDGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGroupCell.m; sourceTree = "<group>"; };
+		24A46E65188ED36600C059E7 /* SDNestedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDNestedTableViewController.h; sourceTree = "<group>"; };
+		24A46E66188ED36600C059E7 /* SDNestedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNestedTableViewController.m; sourceTree = "<group>"; };
+		24A46E67188ED36600C059E7 /* SDSelectableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSelectableCell.h; sourceTree = "<group>"; };
+		24A46E68188ED36600C059E7 /* SDSelectableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDSelectableCell.m; sourceTree = "<group>"; };
+		24A46E69188ED36600C059E7 /* SDSubCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSubCell.h; sourceTree = "<group>"; };
+		24A46E6A188ED36600C059E7 /* SDSubCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDSubCell.m; sourceTree = "<group>"; };
+		24A46E6B188ED36600C059E7 /* WatiBAppStoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatiBAppStoreButton.h; sourceTree = "<group>"; };
+		24A46E6C188ED36600C059E7 /* WatiBAppStoreButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatiBAppStoreButton.m; sourceTree = "<group>"; };
+		24A46E6D188ED36600C059E7 /* WatiBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatiBConstants.h; sourceTree = "<group>"; };
+		24A46E6E188ED36600C059E7 /* WatiBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatiBConstants.m; sourceTree = "<group>"; };
+		24A46E6F188ED36600C059E7 /* WatiBParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatiBParseManager.h; sourceTree = "<group>"; };
+		24A46E70188ED36600C059E7 /* WatiBParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatiBParseManager.m; sourceTree = "<group>"; };
+		24A46E7D188ED43100C059E7 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		24A46E7E188ED43100C059E7 /* libFlurry_4.3.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.1.a; sourceTree = "<group>"; };
+		24A46E81188ED69700C059E7 /* error-icon-large@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error-icon-large@2x~ipad.png"; sourceTree = "<group>"; };
+		24A46E82188ED69700C059E7 /* error-icon-large@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error-icon-large@2x~iphone.png"; sourceTree = "<group>"; };
+		24A46E83188ED69700C059E7 /* error-icon-large~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error-icon-large~ipad.png"; sourceTree = "<group>"; };
+		24A46E84188ED69800C059E7 /* error-icon-large~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error-icon-large~iphone.png"; sourceTree = "<group>"; };
 		24A945661880990F00362C51 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		24A945681880991600362C51 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		24A9456A1880992600362C51 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -121,10 +158,6 @@
 		24A945741880994A00362C51 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		24A945761880995100362C51 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		24A945781880998A00362C51 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		24A9457A18809A7F00362C51 /* WatiBParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WatiBParseManager.m; path = SDNestedTable/WatiBParseManager.m; sourceTree = SOURCE_ROOT; };
-		24A9457B18809A7F00362C51 /* WatiBParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WatiBParseManager.h; path = SDNestedTable/WatiBParseManager.h; sourceTree = SOURCE_ROOT; };
-		24A9457D18809A9300362C51 /* WatiBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WatiBConstants.h; path = SDNestedTable/WatiBConstants.h; sourceTree = SOURCE_ROOT; };
-		24A9457E18809A9300362C51 /* WatiBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WatiBConstants.m; path = SDNestedTable/WatiBConstants.m; sourceTree = SOURCE_ROOT; };
 		24A945A318809ECA00362C51 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
 		24A945A418809ECA00362C51 /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
 		24A945A518809ECA00362C51 /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
@@ -224,23 +257,6 @@
 		8B8EB7E5156A74B00061CF0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B8EB7E7156A74B00061CF0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8B8EB7E9156A74B00061CF0C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8BA4046C159E211A00F3D367 /* SDGroupCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDGroupCell.h; path = SDNestedTablesExample/Classes/SDGroupCell.h; sourceTree = SOURCE_ROOT; };
-		8BA4046D159E211A00F3D367 /* SDGroupCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDGroupCell.m; path = SDNestedTablesExample/Classes/SDGroupCell.m; sourceTree = SOURCE_ROOT; };
-		8BA4046E159E211A00F3D367 /* SDSelectableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDSelectableCell.h; path = SDNestedTablesExample/Classes/SDSelectableCell.h; sourceTree = SOURCE_ROOT; };
-		8BA4046F159E211A00F3D367 /* SDSelectableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDSelectableCell.m; path = SDNestedTablesExample/Classes/SDSelectableCell.m; sourceTree = SOURCE_ROOT; };
-		8BA40470159E211A00F3D367 /* SDSubCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDSubCell.h; path = SDNestedTablesExample/Classes/SDSubCell.h; sourceTree = SOURCE_ROOT; };
-		8BA40471159E211A00F3D367 /* SDSubCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDSubCell.m; path = SDNestedTablesExample/Classes/SDSubCell.m; sourceTree = SOURCE_ROOT; };
-		8BA40472159E212400F3D367 /* blueLedBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueLedBig.png; path = "SDNestedTablesExample/Default Images/blueLedBig.png"; sourceTree = SOURCE_ROOT; };
-		8BA40473159E212400F3D367 /* blueLedBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blueLedBig@2x.png"; path = "SDNestedTablesExample/Default Images/blueLedBig@2x.png"; sourceTree = SOURCE_ROOT; };
-		8BA40474159E212400F3D367 /* blueLedBigOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueLedBigOff.png; path = "SDNestedTablesExample/Default Images/blueLedBigOff.png"; sourceTree = SOURCE_ROOT; };
-		8BA40475159E212400F3D367 /* blueLedSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueLedSmall.png; path = "SDNestedTablesExample/Default Images/blueLedSmall.png"; sourceTree = SOURCE_ROOT; };
-		8BA40476159E212400F3D367 /* blueLedSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blueLedSmall@2x.png"; path = "SDNestedTablesExample/Default Images/blueLedSmall@2x.png"; sourceTree = SOURCE_ROOT; };
-		8BA40477159E212400F3D367 /* blueLedSmallOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueLedSmallOff.png; path = "SDNestedTablesExample/Default Images/blueLedSmallOff.png"; sourceTree = SOURCE_ROOT; };
-		8BA40478159E212400F3D367 /* blueLedSmallOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blueLedSmallOff@2x.png"; path = "SDNestedTablesExample/Default Images/blueLedSmallOff@2x.png"; sourceTree = SOURCE_ROOT; };
-		8BA40479159E212400F3D367 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = disclosure.png; path = "SDNestedTablesExample/Default Images/disclosure.png"; sourceTree = SOURCE_ROOT; };
-		8BA4047A159E212400F3D367 /* disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "disclosure@2x.png"; path = "SDNestedTablesExample/Default Images/disclosure@2x.png"; sourceTree = SOURCE_ROOT; };
-		8BA40484159E212A00F3D367 /* SDGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SDGroupCell.xib; path = SDNestedTablesExample/Nibs/SDGroupCell.xib; sourceTree = SOURCE_ROOT; };
-		8BA40486159E212A00F3D367 /* SDSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SDSubCell.xib; path = SDNestedTablesExample/Nibs/SDSubCell.xib; sourceTree = SOURCE_ROOT; };
 		8BA4048A159E213800F3D367 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SDNestedTablesExample/AppDelegate.h; sourceTree = "<group>"; };
 		8BA4048B159E213800F3D367 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SDNestedTablesExample/AppDelegate.m; sourceTree = "<group>"; };
 		8BA4048C159E213800F3D367 /* ExampleNestedTablesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ExampleNestedTablesViewController.h; path = SDNestedTablesExample/ExampleNestedTablesViewController.h; sourceTree = "<group>"; };
@@ -268,6 +284,7 @@
 				24A945791880998A00362C51 /* Parse.framework in Frameworks */,
 				24A9456B1880992600362C51 /* CoreLocation.framework in Frameworks */,
 				8B8EB7EA156A74B00061CF0C /* CoreGraphics.framework in Frameworks */,
+				24A46E7F188ED43100C059E7 /* libFlurry_4.3.1.a in Frameworks */,
 				24A945691880991600362C51 /* CFNetwork.framework in Frameworks */,
 				24A945671880990F00362C51 /* AudioToolbox.framework in Frameworks */,
 				8B8EB7E6156A74B00061CF0C /* UIKit.framework in Frameworks */,
@@ -278,6 +295,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24A46E35188ED34100C059E7 /* SDNestedTablesExample */ = {
+			isa = PBXGroup;
+			children = (
+				24A46E38188ED34100C059E7 /* Default Images */,
+				24A46E42188ED34100C059E7 /* Default-568h@2x.png */,
+				24A46E47188ED34100C059E7 /* google.png */,
+				24A46E4B188ED34100C059E7 /* shinsekai.png */,
+			);
+			path = SDNestedTablesExample;
+			sourceTree = "<group>";
+		};
+		24A46E38188ED34100C059E7 /* Default Images */ = {
+			isa = PBXGroup;
+			children = (
+				24A46E39188ED34100C059E7 /* blueLedBig.png */,
+				24A46E3A188ED34100C059E7 /* blueLedBig@2x.png */,
+				24A46E3B188ED34100C059E7 /* blueLedBigOff.png */,
+				24A46E3C188ED34100C059E7 /* blueLedSmall.png */,
+				24A46E3D188ED34100C059E7 /* blueLedSmall@2x.png */,
+				24A46E3E188ED34100C059E7 /* blueLedSmallOff.png */,
+				24A46E3F188ED34100C059E7 /* blueLedSmallOff@2x.png */,
+				24A46E40188ED34100C059E7 /* disclosure.png */,
+				24A46E41188ED34100C059E7 /* disclosure@2x.png */,
+			);
+			path = "Default Images";
+			sourceTree = "<group>";
+		};
+		24A46E5D188ED36600C059E7 /* SDNestedTable */ = {
+			isa = PBXGroup;
+			children = (
+				24A46E5E188ED36600C059E7 /* Nibs */,
+				24A46E63188ED36600C059E7 /* SDGroupCell.h */,
+				24A46E64188ED36600C059E7 /* SDGroupCell.m */,
+				24A46E65188ED36600C059E7 /* SDNestedTableViewController.h */,
+				24A46E66188ED36600C059E7 /* SDNestedTableViewController.m */,
+				24A46E67188ED36600C059E7 /* SDSelectableCell.h */,
+				24A46E68188ED36600C059E7 /* SDSelectableCell.m */,
+				24A46E69188ED36600C059E7 /* SDSubCell.h */,
+				24A46E6A188ED36600C059E7 /* SDSubCell.m */,
+				24A46E6B188ED36600C059E7 /* WatiBAppStoreButton.h */,
+				24A46E6C188ED36600C059E7 /* WatiBAppStoreButton.m */,
+				24A46E6D188ED36600C059E7 /* WatiBConstants.h */,
+				24A46E6E188ED36600C059E7 /* WatiBConstants.m */,
+				24A46E6F188ED36600C059E7 /* WatiBParseManager.h */,
+				24A46E70188ED36600C059E7 /* WatiBParseManager.m */,
+			);
+			path = SDNestedTable;
+			sourceTree = "<group>";
+		};
+		24A46E5E188ED36600C059E7 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				24A46E5F188ED36600C059E7 /* SDGroupCell.xib */,
+				24A46E60188ED36600C059E7 /* SDNestedTableView.xib */,
+				24A46E61188ED36600C059E7 /* SDSubCell.xib */,
+				24A46E62188ED36600C059E7 /* WatiBPlayerError.xib */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		24A46E7C188ED43100C059E7 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				24A46E7D188ED43100C059E7 /* Flurry.h */,
+				24A46E7E188ED43100C059E7 /* libFlurry_4.3.1.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
+		24A46E80188ED69700C059E7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				24A46E81188ED69700C059E7 /* error-icon-large@2x~ipad.png */,
+				24A46E82188ED69700C059E7 /* error-icon-large@2x~iphone.png */,
+				24A46E83188ED69700C059E7 /* error-icon-large~ipad.png */,
+				24A46E84188ED69800C059E7 /* error-icon-large~iphone.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		24A9458018809ECA00362C51 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,67 +554,14 @@
 			path = LBYouTubeView;
 			sourceTree = "<group>";
 		};
-		8B720524159CABEB006BC732 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				8BA4046E159E211A00F3D367 /* SDSelectableCell.h */,
-				8BA4046F159E211A00F3D367 /* SDSelectableCell.m */,
-				8BA4046C159E211A00F3D367 /* SDGroupCell.h */,
-				8BA4046D159E211A00F3D367 /* SDGroupCell.m */,
-				8BA40470159E211A00F3D367 /* SDSubCell.h */,
-				8BA40471159E211A00F3D367 /* SDSubCell.m */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		8B72263D159A1DE3001B28C5 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				24A9457D18809A9300362C51 /* WatiBConstants.h */,
-				24A9457E18809A9300362C51 /* WatiBConstants.m */,
-				24A9457B18809A7F00362C51 /* WatiBParseManager.h */,
-				24A9457A18809A7F00362C51 /* WatiBParseManager.m */,
-				1876376815A248C6004F1598 /* SDNestedTableViewController.h */,
-				1876376915A248C6004F1598 /* SDNestedTableViewController.m */,
-				8B720524159CABEB006BC732 /* Cells */,
-			);
-			name = Classes;
-			path = EFMNestedTablesExample/Classes;
-			sourceTree = "<group>";
-		};
-		8B72264B159A1DF0001B28C5 /* Nibs */ = {
-			isa = PBXGroup;
-			children = (
-				1876376B15A249C1004F1598 /* SDNestedTableView.xib */,
-				8BA40484159E212A00F3D367 /* SDGroupCell.xib */,
-				8BA40486159E212A00F3D367 /* SDSubCell.xib */,
-			);
-			name = Nibs;
-			path = EFMNestedTablesExample/Nibs;
-			sourceTree = "<group>";
-		};
-		8B722652159A1E01001B28C5 /* Default Images */ = {
-			isa = PBXGroup;
-			children = (
-				8BA40472159E212400F3D367 /* blueLedBig.png */,
-				8BA40473159E212400F3D367 /* blueLedBig@2x.png */,
-				8BA40474159E212400F3D367 /* blueLedBigOff.png */,
-				8BA40475159E212400F3D367 /* blueLedSmall.png */,
-				8BA40476159E212400F3D367 /* blueLedSmall@2x.png */,
-				8BA40477159E212400F3D367 /* blueLedSmallOff.png */,
-				8BA40478159E212400F3D367 /* blueLedSmallOff@2x.png */,
-				8BA40479159E212400F3D367 /* disclosure.png */,
-				8BA4047A159E212400F3D367 /* disclosure@2x.png */,
-			);
-			name = "Default Images";
-			path = "EFMNestedTablesExample/Default Images";
-			sourceTree = "<group>";
-		};
 		8B8EB7D6156A74AF0061CF0C = {
 			isa = PBXGroup;
 			children = (
+				24A46E80188ED69700C059E7 /* Assets */,
+				24A46E7C188ED43100C059E7 /* Flurry */,
+				24A46E5D188ED36600C059E7 /* SDNestedTable */,
+				24A46E35188ED34100C059E7 /* SDNestedTablesExample */,
 				24A9458018809ECA00362C51 /* lib */,
-				8BB989EA1599D4DC0028D9F7 /* SDNestedTables */,
 				8BA4048A159E213800F3D367 /* AppDelegate.h */,
 				8BA4048B159E213800F3D367 /* AppDelegate.m */,
 				8BA4048C159E213800F3D367 /* ExampleNestedTablesViewController.h */,
@@ -569,19 +613,6 @@
 			);
 			name = "Supporting Files";
 			path = nestedTables;
-			sourceTree = "<group>";
-		};
-		8BB989EA1599D4DC0028D9F7 /* SDNestedTables */ = {
-			isa = PBXGroup;
-			children = (
-				24584A0418859DCD00AD1177 /* Default-568h@2x.png */,
-				24A9455C187F498A00362C51 /* google.png */,
-				24A9455E187F4A1000362C51 /* shinsekai.png */,
-				8B72263D159A1DE3001B28C5 /* Classes */,
-				8B72264B159A1DF0001B28C5 /* Nibs */,
-				8B722652159A1E01001B28C5 /* Default Images */,
-			);
-			name = SDNestedTables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,25 +670,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA4047B159E212400F3D367 /* blueLedBig.png in Resources */,
-				8BA4047C159E212400F3D367 /* blueLedBig@2x.png in Resources */,
-				8BA4047D159E212400F3D367 /* blueLedBigOff.png in Resources */,
-				8BA4047E159E212400F3D367 /* blueLedSmall.png in Resources */,
-				8BA4047F159E212400F3D367 /* blueLedSmall@2x.png in Resources */,
 				24A946FC18809ECB00362C51 /* Makefile.am in Resources */,
-				8BA40480159E212400F3D367 /* blueLedSmallOff.png in Resources */,
-				24A9455F187F4A1000362C51 /* shinsekai.png in Resources */,
+				24A46E50188ED34100C059E7 /* blueLedSmall.png in Resources */,
+				24A46E55188ED34100C059E7 /* disclosure@2x.png in Resources */,
+				24A46E51188ED34100C059E7 /* blueLedSmall@2x.png in Resources */,
 				24A946D618809ECB00362C51 /* Makefile.am in Resources */,
-				8BA40481159E212400F3D367 /* blueLedSmallOff@2x.png in Resources */,
-				8BA40482159E212400F3D367 /* disclosure.png in Resources */,
-				8BA40483159E212400F3D367 /* disclosure@2x.png in Resources */,
-				8BA40487159E212A00F3D367 /* SDGroupCell.xib in Resources */,
-				24584A0518859DCD00AD1177 /* Default-568h@2x.png in Resources */,
+				24A46E56188ED34100C059E7 /* Default-568h@2x.png in Resources */,
 				24A946C518809ECB00362C51 /* Makefile.am in Resources */,
-				8BA40489159E212A00F3D367 /* SDSubCell.xib in Resources */,
+				24A46E88188ED69800C059E7 /* error-icon-large~iphone.png in Resources */,
+				24A46E74188ED36600C059E7 /* WatiBPlayerError.xib in Resources */,
 				8BA40493159E214E00F3D367 /* InfoPlist.strings in Resources */,
-				24A9455D187F498A00362C51 /* google.png in Resources */,
-				1876376C15A249C1004F1598 /* SDNestedTableView.xib in Resources */,
+				24A46E5C188ED34100C059E7 /* shinsekai.png in Resources */,
+				24A46E86188ED69800C059E7 /* error-icon-large@2x~iphone.png in Resources */,
+				24A46E54188ED34100C059E7 /* disclosure.png in Resources */,
+				24A46E87188ED69800C059E7 /* error-icon-large~ipad.png in Resources */,
+				24A46E59188ED34100C059E7 /* google.png in Resources */,
+				24A46E4F188ED34100C059E7 /* blueLedBigOff.png in Resources */,
+				24A46E4D188ED34100C059E7 /* blueLedBig.png in Resources */,
+				24A46E4E188ED34100C059E7 /* blueLedBig@2x.png in Resources */,
+				24A46E85188ED69800C059E7 /* error-icon-large@2x~ipad.png in Resources */,
+				24A46E71188ED36600C059E7 /* SDGroupCell.xib in Resources */,
+				24A46E72188ED36600C059E7 /* SDNestedTableView.xib in Resources */,
+				24A46E52188ED34100C059E7 /* blueLedSmallOff.png in Resources */,
+				24A46E53188ED34100C059E7 /* blueLedSmallOff@2x.png in Resources */,
+				24A46E73188ED36600C059E7 /* SDSubCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,26 +711,28 @@
 				8BA40498159E216700F3D367 /* AppDelegate.m in Sources */,
 				24A9470218809ECB00362C51 /* utils.c in Sources */,
 				24A946CA18809ECB00362C51 /* webp.c in Sources */,
+				24A46E7A188ED36600C059E7 /* WatiBConstants.m in Sources */,
 				24A946C718809ECB00362C51 /* tree.c in Sources */,
-				24A9457C18809A7F00362C51 /* WatiBParseManager.m in Sources */,
 				24A9468918809ECA00362C51 /* SDWebImageDownloaderOperation.m in Sources */,
 				24A946D818809ECB00362C51 /* upsampling_neon.c in Sources */,
 				24A946CE18809ECB00362C51 /* cpu.c in Sources */,
 				24A9468518809ECA00362C51 /* SDImageCache.m in Sources */,
 				24A9471C1880A20200362C51 /* NSData+ImageContentType.m in Sources */,
+				24A46E77188ED36600C059E7 /* SDSelectableCell.m in Sources */,
 				24A9470018809ECB00362C51 /* rescaler.c in Sources */,
+				24A46E78188ED36600C059E7 /* SDSubCell.m in Sources */,
+				24A46E7B188ED36600C059E7 /* WatiBParseManager.m in Sources */,
 				24A946F818809ECB00362C51 /* color_cache.c in Sources */,
 				24A946C918809ECB00362C51 /* vp8l.c in Sources */,
-				24A9457F18809A9300362C51 /* WatiBConstants.m in Sources */,
 				24A9478218859AE200362C51 /* LBYouTubePlayerViewController.m in Sources */,
 				24A946D218809ECB00362C51 /* enc.c in Sources */,
+				24A46E75188ED36600C059E7 /* SDGroupCell.m in Sources */,
 				24A946FB18809ECB00362C51 /* huffman_encode.c in Sources */,
-				8BA40497159E216200F3D367 /* SDSubCell.m in Sources */,
+				24A46E79188ED36600C059E7 /* WatiBAppStoreButton.m in Sources */,
 				24A946F718809ECB00362C51 /* bit_writer.c in Sources */,
 				24A9468618809ECA00362C51 /* SDWebImageCompat.m in Sources */,
 				24A946C418809ECB00362C51 /* layer.c in Sources */,
 				24A9470118809ECB00362C51 /* thread.c in Sources */,
-				8BA40496159E215F00F3D367 /* SDGroupCell.m in Sources */,
 				24A946FF18809ECB00362C51 /* random.c in Sources */,
 				24A9468A18809ECA00362C51 /* SDWebImageManager.m in Sources */,
 				24A946C218809ECB00362C51 /* idec.c in Sources */,
@@ -703,7 +741,6 @@
 				24A946FA18809ECB00362C51 /* huffman.c in Sources */,
 				24A9468818809ECA00362C51 /* SDWebImageDownloader.m in Sources */,
 				24A946FE18809ECB00362C51 /* quant_levels_dec.c in Sources */,
-				8BA40495159E215D00F3D367 /* SDSelectableCell.m in Sources */,
 				24A9468D18809ECA00362C51 /* UIImage+GIF.m in Sources */,
 				24A946C618809ECB00362C51 /* quant.c in Sources */,
 				24A946C118809ECB00362C51 /* frame.c in Sources */,
@@ -721,7 +758,7 @@
 				24A946C318809ECB00362C51 /* io.c in Sources */,
 				24A9468E18809ECA00362C51 /* UIImage+MultiFormat.m in Sources */,
 				24A9468718809ECA00362C51 /* SDWebImageDecoder.m in Sources */,
-				1876376A15A248C6004F1598 /* SDNestedTableViewController.m in Sources */,
+				24A46E76188ED36600C059E7 /* SDNestedTableViewController.m in Sources */,
 				24A946BF18809ECB00362C51 /* alpha.c in Sources */,
 				24A946D918809ECB00362C51 /* upsampling_sse2.c in Sources */,
 				24A946CF18809ECB00362C51 /* dec.c in Sources */,
@@ -805,6 +842,10 @@
 				GCC_PREFIX_HEADER = "SDNestedTablesExample/SDNestedTables-Prefix.pch";
 				INFOPLIST_FILE = "SDNestedTablesExample/SDNestedTables-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/fj/Desktop/Wati-B/Final\\ Project/ios/lib/SDNestedTable/Flurry",
+				);
 				PRODUCT_NAME = SDNestedTablesExample;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -825,6 +866,10 @@
 				GCC_PREFIX_HEADER = "SDNestedTablesExample/SDNestedTables-Prefix.pch";
 				INFOPLIST_FILE = "SDNestedTablesExample/SDNestedTables-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/fj/Desktop/Wati-B/Final\\ Project/ios/lib/SDNestedTable/Flurry",
+				);
 				PRODUCT_NAME = SDNestedTablesExample;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

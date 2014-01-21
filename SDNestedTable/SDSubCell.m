@@ -25,4 +25,9 @@
     [super setupInterface];
 }
 
+- (void) tapTransition
+{
+    [super tapTransition];
+}
+
 @end

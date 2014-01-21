@@ -122,9 +122,6 @@
 	expandedIndexes = [[NSMutableDictionary alloc] init];
 	selectableCellsState = [[NSMutableDictionary alloc] init];
 	selectableSubCellsState = [[NSMutableDictionary alloc] init];
-    
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -153,6 +150,8 @@
     
     [cell setParentTable: self];
     [cell setCellIndexPath:indexPath];
+    
+    cell = [self mainTable:tableView setItem:cell forRowAtIndexPath:indexPath];
     
     NSNumber *amt = [NSNumber numberWithInt:[self mainTable:tableView numberOfSubItemsforItem:cell atIndexPath:indexPath]];
     [subItemsAmt setObject:amt forKey:indexPath];
@@ -191,17 +190,27 @@
         [cell rotateExpandBtnToCollapsed];
     }
     
-    cell = [self mainTable:tableView setItem:cell forRowAtIndexPath:indexPath];
-    
     [cell.subTable reloadData];
     
     return cell;
 }
 
+//- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    int amt = [[subItemsAmt objectForKey:indexPath] intValue];
+//    BOOL isExpanded = [[expandedIndexes objectForKey:indexPath] boolValue];
+//    if(isExpanded)
+//    {
+//        return [SDGroupCell getHeight] + [SDGroupCell getsubCellHeight]*amt + 1;
+//    }
+//    return [SDGroupCell getHeight];
+//}
+
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int amt = [[subItemsAmt objectForKey:indexPath] intValue];
-    BOOL isExpanded = [[expandedIndexes objectForKey:indexPath] boolValue];
+    NSIndexPath *indexPathKey = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
+    int amt = [[subItemsAmt objectForKey:indexPathKey] intValue];
+    BOOL isExpanded = [[expandedIndexes objectForKey:indexPathKey] boolValue];
     if(isExpanded)
     {
         return [SDGroupCell getHeight] + [SDGroupCell getsubCellHeight]*amt + 1;
@@ -213,7 +222,8 @@
 {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
     SDGroupCell *cell = (SDGroupCell *)[tableView cellForRowAtIndexPath:indexPath];
-    [self toggleCell: cell atIndexPath: indexPath];
+//    [self toggleCell: cell atIndexPath: indexPath];
+    [self collapsableWithIndexPath:indexPath];
 }
 
 - (void) toggleCell:(SDGroupCell *)cell atIndexPath: (NSIndexPath *) pathToToggle
@@ -226,6 +236,9 @@
     [cell subCellsToggleCheck];
     
     [self mainItemDidChange:cell forTap:YES];
+    
+//    [self.tableView scrollToRowAtIndexPath:pathToToggle atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+//    [self.tableView scrollToNearestSelectedRowAtScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 #pragma mark - Nested Tables events
@@ -275,6 +288,28 @@
 	NSNumber *expandedIndex = [NSNumber numberWithBool:isExpanded];
 	[expandedIndexes setObject:expandedIndex forKey:indexPath];
 
+    [self.tableView beginUpdates];
+    [self.tableView endUpdates];
+}
+
+- (void) collapsableWithIndexPath:(NSIndexPath *)indexPath
+{
+    UITableView *tableView = self.tableView;
+//    NSIndexPath * indexPath = [tableView indexPathForRowAtPoint: [[[event touchesForView: button] anyObject] locationInView: tableView]];
+    if ( indexPath == nil )
+        return;
+    
+    if ([[expandedIndexes objectForKey:indexPath] boolValue]) {
+        [self collapsingItem:(SDGroupCell *)[tableView cellForRowAtIndexPath:indexPath] withIndexPath:indexPath];
+    } else {
+        [self expandingItem:(SDGroupCell *)[tableView cellForRowAtIndexPath:indexPath] withIndexPath:indexPath];
+    }
+    
+    // reset cell expanded state in array
+	BOOL isExpanded = ![[expandedIndexes objectForKey:indexPath] boolValue];
+	NSNumber *expandedIndex = [NSNumber numberWithBool:isExpanded];
+	[expandedIndexes setObject:expandedIndex forKey:indexPath];
+    
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
 }

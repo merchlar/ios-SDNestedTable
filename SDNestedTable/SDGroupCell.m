@@ -9,7 +9,8 @@
 #import "SDGroupCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SDNestedTableViewController.h"
-
+#import "LBYouTube.h"
+#import "Flurry.h"
 @implementation SDGroupCell
 
 @synthesize isExpanded, subTable, subCell, subCellsAmt, selectedSubCellsAmt, selectableSubCellsState, cellIndexPath;
@@ -53,26 +54,15 @@
     [super setupInterface];
     
     CGRect bgrndFrame = self.backgroundView.frame;
-    bgrndFrame.size.height = 50;
+    bgrndFrame.size.height = height;
     self.backgroundView.frame = bgrndFrame;
     
-    expandBtn.frame = CGRectMake(0, 5, 40, 40);
-    [expandBtn setBackgroundColor:[UIColor clearColor]];
-    [expandBtn setImage:[UIImage imageNamed:@"disclosure"] forState:UIControlStateNormal];
-    [expandBtn addTarget:self.parentTable action:@selector(collapsableButtonTapped:withEvent:) forControlEvents:UIControlEventTouchUpInside];
-    [expandBtn addTarget:self action:@selector(rotateExpandBtn:) forControlEvents:UIControlEventTouchUpInside];
-    if (self.selectableCellState == Checked)
-    {
-        expandBtn.alpha = 1.0;
-    }
-    else if (self.selectableCellState == Halfchecked)
-    {
-        expandBtn.alpha = 0.75;
-    }
-    else
-    {
-        expandBtn.alpha = 0.45;
-    }
+//    expandBtn.frame = CGRectMake(0, 5, 40, 40);
+//    [expandBtn setBackgroundColor:[UIColor clearColor]];
+//    [expandBtn setImage:[UIImage imageNamed:@"disclosure"] forState:UIControlStateNormal];
+//    [expandBtn addTarget:self.parentTable action:@selector(collapsableButtonTapped:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+//    [expandBtn addTarget:self action:@selector(rotateExpandBtn:) forControlEvents:UIControlEventTouchUpInside];
+//    expandBtn.alpha = 0.45;
     
     offCheckBox = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"blueLedBigOff"]];
     onCheckBox = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"blueLedBig"]];
@@ -165,6 +155,11 @@
     subCellsCommand = AllSubCellsCommandNone;
 }
 
+- (void) tapTransition
+{
+    [super tapTransition];
+}
+
 #pragma mark - Table view
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -203,6 +198,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+    
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     SDSubCell *cell = (SDSubCell *)[tableView cellForRowAtIndexPath:indexPath];
@@ -211,7 +208,23 @@
         cell = (SDSubCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
     }
     
-    [self toggleCell:cell atIndexPath:indexPath];
+//    [self toggleCell:cell atIndexPath:indexPath];
+
+    
+
+    
+    if (cell.songObject) {
+        LBYouTubePlayerViewController* controller = [[LBYouTubePlayerViewController alloc] initWithYouTubeURL:[NSURL URLWithString:[cell.songObject objectForKey:@"link"]] quality:LBYouTubeVideoQualityLarge];
+        controller.delegate = self;
+        
+//        [Flurry logEvent:@"WATI_SONS_VIDEO_LAUNCH" withParameters:[NSDictionary dictionaryWithObject:[cell.songObject objectForKey:@"link"] forKey:@"name"]];
+        [Flurry logEvent:@"WATI_SONS_VIDEO_LAUNCH" withParameters:[NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:[cell.songObject objectForKey:@"link"], [self.artistObject objectForKey:@"name"], nil] forKeys:[NSArray arrayWithObjects:@"link", @"artist", nil]]];
+
+        
+        [self.parentTable presentViewController:controller animated:YES completion:nil];
+    }
+
+
 }
 
 
@@ -274,6 +287,23 @@
             break;
     }
     [self.parentTable groupCell:self didSelectSubCell:cell withIndexPath:pathToToggle andWithTap:cellTapped];
+}
+
+#pragma mark LBYouTubePlayerViewControllerDelegate
+
+-(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller didSuccessfullyExtractYouTubeURL:(NSURL *)videoURL {
+    NSLog(@"Did extract video source:%@", videoURL);
+}
+
+-(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller failedExtractingYouTubeURLWithError:(NSError *)error {
+    NSLog(@"Failed loading video due to error:%@", error);
+    
+    UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Erreur"
+                                                         message:@"Impossible de lire cette video à partir de YouTube"
+                                                        delegate:nil
+                                               cancelButtonTitle:nil
+                                               otherButtonTitles:@"OK", nil];
+    [alertView show];
 }
 
 @end

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SDSelectableCell.h"
+#import <Parse/Parse.h>
 
 @interface SDSubCell : SDSelectableCell
+
+@property (nonatomic,strong) PFObject * songObject;
 
 @end

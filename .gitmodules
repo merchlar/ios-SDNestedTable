@@ -4,3 +4,9 @@
 [submodule "lib/LBYouTubeView"]
 	path = lib/LBYouTubeView
 	url = https://github.com/MarcosSTM/LBYouTubeView
+[submodule "lib/BLYYoutubeExtractor"]
+	path = lib/BLYYoutubeExtractor
+	url = https://github.com/jeremylevy/BLYYoutubeExtractor
+[submodule "lib/MBProgressHUD"]
+	path = lib/MBProgressHUD
+	url = https://github.com/merchlar/MBProgressHUD

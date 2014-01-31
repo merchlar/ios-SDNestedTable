@@ -102,6 +102,14 @@
 		24A9478218859AE200362C51 /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A9477218859AE100362C51 /* LBYouTubePlayerViewController.m */; };
 		24A9478C18859C5900362C51 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9478B18859C5900362C51 /* JavaScriptCore.framework */; };
 		24A9478E18859C6600362C51 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A9478D18859C6600362C51 /* MediaPlayer.framework */; };
+		24F807B4189BFDDB00794F34 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F80788189BFDDB00794F34 /* MBProgressHUD.m */; };
+		24F807B9189BFDDB00794F34 /* BLYHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F80793189BFDDB00794F34 /* BLYHTTPConnection.m */; };
+		24F807BA189BFDDB00794F34 /* BLYYoutubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F80795189BFDDB00794F34 /* BLYYoutubeExtractor.m */; };
+		24F807BB189BFDDB00794F34 /* BLYYoutubeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F80797189BFDDB00794F34 /* BLYYoutubeURL.m */; };
+		24F807BC189BFDDB00794F34 /* BLYYoutubeURLCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F80799189BFDDB00794F34 /* BLYYoutubeURLCollection.m */; };
+		24F807BD189BFDDB00794F34 /* NSString+Escaping.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F8079B189BFDDB00794F34 /* NSString+Escaping.m */; };
+		24F807BE189BFDDB00794F34 /* NSString+Matching.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F8079D189BFDDB00794F34 /* NSString+Matching.m */; };
+		24F807C7189BFE1800794F34 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F807C6189BFE1800794F34 /* AVFoundation.framework */; };
 		8B8EB7E6156A74B00061CF0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E5156A74B00061CF0C /* UIKit.framework */; };
 		8B8EB7E8156A74B00061CF0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E7156A74B00061CF0C /* Foundation.framework */; };
 		8B8EB7EA156A74B00061CF0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E9156A74B00061CF0C /* CoreGraphics.framework */; };
@@ -253,6 +261,21 @@
 		24A9477218859AE100362C51 /* LBYouTubePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubePlayerViewController.m; sourceTree = "<group>"; };
 		24A9478B18859C5900362C51 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		24A9478D18859C6600362C51 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		24F80787189BFDDB00794F34 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		24F80788189BFDDB00794F34 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		24F80792189BFDDB00794F34 /* BLYHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLYHTTPConnection.h; sourceTree = "<group>"; };
+		24F80793189BFDDB00794F34 /* BLYHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLYHTTPConnection.m; sourceTree = "<group>"; };
+		24F80794189BFDDB00794F34 /* BLYYoutubeExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLYYoutubeExtractor.h; sourceTree = "<group>"; };
+		24F80795189BFDDB00794F34 /* BLYYoutubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLYYoutubeExtractor.m; sourceTree = "<group>"; };
+		24F80796189BFDDB00794F34 /* BLYYoutubeURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLYYoutubeURL.h; sourceTree = "<group>"; };
+		24F80797189BFDDB00794F34 /* BLYYoutubeURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLYYoutubeURL.m; sourceTree = "<group>"; };
+		24F80798189BFDDB00794F34 /* BLYYoutubeURLCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLYYoutubeURLCollection.h; sourceTree = "<group>"; };
+		24F80799189BFDDB00794F34 /* BLYYoutubeURLCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLYYoutubeURLCollection.m; sourceTree = "<group>"; };
+		24F8079A189BFDDB00794F34 /* NSString+Escaping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Escaping.h"; sourceTree = "<group>"; };
+		24F8079B189BFDDB00794F34 /* NSString+Escaping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Escaping.m"; sourceTree = "<group>"; };
+		24F8079C189BFDDB00794F34 /* NSString+Matching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Matching.h"; sourceTree = "<group>"; };
+		24F8079D189BFDDB00794F34 /* NSString+Matching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Matching.m"; sourceTree = "<group>"; };
+		24F807C6189BFE1800794F34 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8B8EB7E1156A74B00061CF0C /* SDNestedTablesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDNestedTablesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8EB7E5156A74B00061CF0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B8EB7E7156A74B00061CF0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -272,6 +295,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F807C7189BFE1800794F34 /* AVFoundation.framework in Frameworks */,
 				24A9478E18859C6600362C51 /* MediaPlayer.framework in Frameworks */,
 				24A9478C18859C5900362C51 /* JavaScriptCore.framework in Frameworks */,
 				24A9471E1880A27E00362C51 /* ImageIO.framework in Frameworks */,
@@ -378,6 +402,8 @@
 		24A9458018809ECA00362C51 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				24F80765189BFDDB00794F34 /* MBProgressHUD */,
+				24F8078F189BFDDB00794F34 /* BLYYoutubeExtractor */,
 				24A9476A18859AE100362C51 /* LBYouTubeView */,
 				24A9458118809ECA00362C51 /* SDWebImage */,
 			);
@@ -554,6 +580,42 @@
 			path = LBYouTubeView;
 			sourceTree = "<group>";
 		};
+		24F80765189BFDDB00794F34 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				24F80787189BFDDB00794F34 /* MBProgressHUD.h */,
+				24F80788189BFDDB00794F34 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		24F8078F189BFDDB00794F34 /* BLYYoutubeExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				24F80791189BFDDB00794F34 /* BLYYoutubeExtractor */,
+			);
+			path = BLYYoutubeExtractor;
+			sourceTree = "<group>";
+		};
+		24F80791189BFDDB00794F34 /* BLYYoutubeExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				24F80792189BFDDB00794F34 /* BLYHTTPConnection.h */,
+				24F80793189BFDDB00794F34 /* BLYHTTPConnection.m */,
+				24F80794189BFDDB00794F34 /* BLYYoutubeExtractor.h */,
+				24F80795189BFDDB00794F34 /* BLYYoutubeExtractor.m */,
+				24F80796189BFDDB00794F34 /* BLYYoutubeURL.h */,
+				24F80797189BFDDB00794F34 /* BLYYoutubeURL.m */,
+				24F80798189BFDDB00794F34 /* BLYYoutubeURLCollection.h */,
+				24F80799189BFDDB00794F34 /* BLYYoutubeURLCollection.m */,
+				24F8079A189BFDDB00794F34 /* NSString+Escaping.h */,
+				24F8079B189BFDDB00794F34 /* NSString+Escaping.m */,
+				24F8079C189BFDDB00794F34 /* NSString+Matching.h */,
+				24F8079D189BFDDB00794F34 /* NSString+Matching.m */,
+			);
+			path = BLYYoutubeExtractor;
+			sourceTree = "<group>";
+		};
 		8B8EB7D6156A74AF0061CF0C = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +645,7 @@
 		8B8EB7E4156A74B00061CF0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24F807C6189BFE1800794F34 /* AVFoundation.framework */,
 				24A9478D18859C6600362C51 /* MediaPlayer.framework */,
 				24A9478B18859C5900362C51 /* JavaScriptCore.framework */,
 				24A9471D1880A27E00362C51 /* ImageIO.framework */,
@@ -718,13 +781,18 @@
 				24A946CE18809ECB00362C51 /* cpu.c in Sources */,
 				24A9468518809ECA00362C51 /* SDImageCache.m in Sources */,
 				24A9471C1880A20200362C51 /* NSData+ImageContentType.m in Sources */,
+				24F807BC189BFDDB00794F34 /* BLYYoutubeURLCollection.m in Sources */,
+				24F807BA189BFDDB00794F34 /* BLYYoutubeExtractor.m in Sources */,
 				24A46E77188ED36600C059E7 /* SDSelectableCell.m in Sources */,
 				24A9470018809ECB00362C51 /* rescaler.c in Sources */,
+				24F807B9189BFDDB00794F34 /* BLYHTTPConnection.m in Sources */,
 				24A46E78188ED36600C059E7 /* SDSubCell.m in Sources */,
 				24A46E7B188ED36600C059E7 /* WatiBParseManager.m in Sources */,
+				24F807BE189BFDDB00794F34 /* NSString+Matching.m in Sources */,
 				24A946F818809ECB00362C51 /* color_cache.c in Sources */,
 				24A946C918809ECB00362C51 /* vp8l.c in Sources */,
 				24A9478218859AE200362C51 /* LBYouTubePlayerViewController.m in Sources */,
+				24F807B4189BFDDB00794F34 /* MBProgressHUD.m in Sources */,
 				24A946D218809ECB00362C51 /* enc.c in Sources */,
 				24A46E75188ED36600C059E7 /* SDGroupCell.m in Sources */,
 				24A946FB18809ECB00362C51 /* huffman_encode.c in Sources */,
@@ -751,6 +819,7 @@
 				24A946D018809ECB00362C51 /* dec_neon.c in Sources */,
 				24A946C818809ECB00362C51 /* vp8.c in Sources */,
 				24A946FD18809ECB00362C51 /* quant_levels.c in Sources */,
+				24F807BD189BFDDB00794F34 /* NSString+Escaping.m in Sources */,
 				24A9478118859AE200362C51 /* LBYouTubeExtractor.m in Sources */,
 				24A9468B18809ECA00362C51 /* SDWebImagePrefetcher.m in Sources */,
 				24A9468C18809ECA00362C51 /* UIButton+WebCache.m in Sources */,
@@ -764,6 +833,7 @@
 				24A946CF18809ECB00362C51 /* dec.c in Sources */,
 				24A946F918809ECB00362C51 /* filters.c in Sources */,
 				24A946F618809ECB00362C51 /* bit_reader.c in Sources */,
+				24F807BB189BFDDB00794F34 /* BLYYoutubeURL.m in Sources */,
 				24A946C018809ECB00362C51 /* buffer.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

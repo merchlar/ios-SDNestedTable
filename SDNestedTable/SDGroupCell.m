@@ -8,8 +8,8 @@
 
 #import "SDGroupCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import <MediaPlayer/MediaPlayer.h>
 #import "SDNestedTableViewController.h"
-#import "LBYouTube.h"
 #import "Flurry.h"
 
 #import "BLYYoutubeExtractor.h"
@@ -373,21 +373,5 @@
     [self.parentTable groupCell:self didSelectSubCell:cell withIndexPath:pathToToggle andWithTap:cellTapped];
 }
 
-#pragma mark LBYouTubePlayerViewControllerDelegate
-
--(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller didSuccessfullyExtractYouTubeURL:(NSURL *)videoURL {
-    NSLog(@"Did extract video source:%@", videoURL);
-}
-
--(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller failedExtractingYouTubeURLWithError:(NSError *)error {
-    NSLog(@"Failed loading video due to error:%@", error);
-    
-    UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Erreur"
-                                                         message:@"Impossible de lire cette video à partir de YouTube"
-                                                        delegate:nil
-                                               cancelButtonTitle:nil
-                                               otherButtonTitles:@"OK", nil];
-    [alertView show];
-}
 
 @end

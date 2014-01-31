@@ -19,6 +19,8 @@
 
 @implementation ExampleNestedTablesViewController
 
+@synthesize isAlreadyShowing;
+
 - (id) init
 {
     if (self = [super initWithNibName:@"SDNestedTableView" bundle:nil])
@@ -277,6 +279,52 @@
 - (void)collapsingItem:(SDGroupCell *)item withIndexPath:(NSIndexPath *)indexPath 
 {
     NSLog(@"Collapsed Item at indexPath: %@", indexPath);
+}
+
+#pragma mark Loader methods
+
+- (void)showLoader {
+    if (!isAlreadyShowing) {
+        //        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
+        HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:HUD];
+        
+        HUD.animationType = MBProgressHUDAnimationFade;
+        
+        HUD.delegate = self;
+        
+        
+        [HUD show:YES];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+        isAlreadyShowing = YES;
+        
+    }
+    
+    HUD.mode = MBProgressHUDModeIndeterminate;
+    HUD.labelText = @"Chargement";
+    
+    //    HUD.mode = MBProgressHUDModeAnnularDeterminate;
+    //    HUD.labelText = @"Téléchargement";
+}
+
+- (void)hideLoader {
+    isAlreadyShowing = NO;
+    
+    [HUD hide:YES];
+    
+    //    [MBProgressHUD hideHUDForView:self.view animated:YES];
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+#pragma mark -
+#pragma mark MBProgressHUDDelegate methods
+
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+	// Remove HUD from screen when the HUD was hidded
+	[HUD removeFromSuperview];
+    //	[HUD release];
+	HUD = nil;
 }
 
 @end

@@ -11,6 +11,13 @@
 #import "SDNestedTableViewController.h"
 #import "LBYouTube.h"
 #import "Flurry.h"
+
+#import "BLYYoutubeExtractor.h"
+#import "BLYYoutubeURLCollection.h"
+#import "BLYYoutubeURL.h"
+
+#import "ExampleNestedTablesViewController.h"
+
 @implementation SDGroupCell
 
 @synthesize isExpanded, subTable, subCell, subCellsAmt, selectedSubCellsAmt, selectableSubCellsState, cellIndexPath;
@@ -214,14 +221,91 @@
 
     
     if (cell.songObject) {
-        LBYouTubePlayerViewController* controller = [[LBYouTubePlayerViewController alloc] initWithYouTubeURL:[NSURL URLWithString:[cell.songObject objectForKey:@"link"]] quality:LBYouTubeVideoQualityLarge];
-        controller.delegate = self;
+//        LBYouTubePlayerViewController* controller = [[LBYouTubePlayerViewController alloc] initWithYouTubeURL:[NSURL URLWithString:[cell.songObject objectForKey:@"link"]] quality:LBYouTubeVideoQualityLarge];
+//        controller.delegate = self;
         
 //        [Flurry logEvent:@"WATI_SONS_VIDEO_LAUNCH" withParameters:[NSDictionary dictionaryWithObject:[cell.songObject objectForKey:@"link"] forKey:@"name"]];
         [Flurry logEvent:@"WATI_SONS_VIDEO_LAUNCH" withParameters:[NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:[cell.songObject objectForKey:@"link"], [self.artistObject objectForKey:@"name"], nil] forKeys:[NSArray arrayWithObjects:@"link", @"artist", nil]]];
 
         
-        [self.parentTable presentViewController:controller animated:YES completion:nil];
+//        [self.parentTable presentViewController:controller animated:YES completion:nil];
+        
+        
+        
+        BLYYoutubeExtractor *ytExtractor = [[BLYYoutubeExtractor alloc] init];
+        
+        [self.parentTable showLoader];
+        
+        /**
+         * @param NSString*                  The YouTube video ID
+         * @param BOOL                       Don't display network activity indicator ?
+         * @param ^(BLYYoutubeURLCollection*, NSError*) Completion block called after extraction has ended.
+         */
+        [ytExtractor urlsForVideoID:[cell.songObject objectForKey:@"youtube_id"]
+                       inBackground:NO
+                withCompletionBlock:^(BLYYoutubeURLCollection *urls, NSError *err){
+                    
+                    [self.parentTable hideLoader];
+                    
+                    if (err) {
+                        NSString *errorDesc = [err localizedDescription];
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                            message:errorDesc
+                                                                           delegate:nil
+                                                                  cancelButtonTitle:@"OK"
+                                                                  otherButtonTitles:nil];
+                        
+                        [alertView show];
+                        
+                        return;
+                    }
+                    
+                    BLYYoutubeURL *lowerQuality = [urls URLForVideoWithLowerQuality];
+                    BLYYoutubeURL *mediumQuality = [urls URLForVideoWithMediumQuality];
+                    BLYYoutubeURL *higherQuality = [urls URLForVideoWithHigherQuality];
+                    
+                    NSLog(@"Lower Quality: %@ (Expires at: %@) (Is expired? %d) (Itag: %d)",
+                          lowerQuality.value,
+                          lowerQuality.expiresAt,
+                          lowerQuality.isExpired,
+                          lowerQuality.itag);
+                    
+                    NSLog(@"Medium Quality: %@ (Expires at: %@) (Is expired? %d) (Itag: %d)",
+                          mediumQuality.value,
+                          mediumQuality.expiresAt,
+                          mediumQuality.isExpired,
+                          mediumQuality.itag);
+                    
+                    NSLog(@"Higher Quality: %@ (Expires at: %@) (Is expired? %d) (Itag: %d)",
+                          higherQuality.value,
+                          higherQuality.expiresAt,
+                          higherQuality.isExpired,
+                          higherQuality.itag);
+                    
+                    // For a complete list of itag, see : http://en.wikipedia.org/wiki/YouTube#Quality_and_codecs
+                    
+                    NSURL * finalURL;
+                    if (higherQuality) {
+                        if ([higherQuality.value length] > 1) {
+                            finalURL = [NSURL URLWithString:higherQuality.value];
+                        }
+                    }
+                    else if (mediumQuality) {
+                        if ([mediumQuality.value length] > 1) {
+                            finalURL = [NSURL URLWithString:mediumQuality.value];
+                        }
+                    }
+                    else {
+                        finalURL = [NSURL URLWithString:lowerQuality.value];
+                    }
+                    
+                    
+                    MPMoviePlayerViewController * movieVC = [[MPMoviePlayerViewController alloc] initWithContentURL:finalURL];
+                    [self.parentTable presentMoviePlayerViewControllerAnimated:movieVC];
+                    [movieVC.moviePlayer play];
+                    
+                }];
+
     }
 
 

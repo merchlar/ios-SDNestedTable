@@ -8,9 +8,17 @@
 
 #import "SDNestedTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "MBProgressHUD.h"
 
-@interface ExampleNestedTablesViewController : SDNestedTableViewController
+
+@interface ExampleNestedTablesViewController : SDNestedTableViewController <MBProgressHUDDelegate> {
+    MBProgressHUD *HUD;
+}
+@property BOOL isAlreadyShowing;
 
 @property (nonatomic, strong) NSArray * items;
+
+-(void)showLoader;
+-(void)hideLoader;
 
 @end

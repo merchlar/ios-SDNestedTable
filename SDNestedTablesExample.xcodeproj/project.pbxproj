@@ -110,6 +110,14 @@
 		24F807BD189BFDDB00794F34 /* NSString+Escaping.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F8079B189BFDDB00794F34 /* NSString+Escaping.m */; };
 		24F807BE189BFDDB00794F34 /* NSString+Matching.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F8079D189BFDDB00794F34 /* NSString+Matching.m */; };
 		24F807C7189BFE1800794F34 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F807C6189BFE1800794F34 /* AVFoundation.framework */; };
+		24F8081A189C42DB00794F34 /* PMMain_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F807F5189C42DB00794F34 /* PMMain_iPad.storyboard */; };
+		24F8081B189C42DB00794F34 /* PMMain_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F807F7189C42DB00794F34 /* PMMain_iPhone.storyboard */; };
+		24F8081F189C42DB00794F34 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F807FD189C42DB00794F34 /* pause.png */; };
+		24F80820189C42DB00794F34 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F807FE189C42DB00794F34 /* play.png */; };
+		24F80822189C42DB00794F34 /* PMActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F80802189C42DB00794F34 /* PMActivityProvider.m */; };
+		24F80824189C42DB00794F34 /* PMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F80806189C42DB00794F34 /* PMViewController.m */; };
+		24F80825189C42DB00794F34 /* PMYouTubeSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F80808189C42DB00794F34 /* PMYouTubeSong.m */; };
+		24F80830189C466F00794F34 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F8082F189C466F00794F34 /* CoreMedia.framework */; };
 		8B8EB7E6156A74B00061CF0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E5156A74B00061CF0C /* UIKit.framework */; };
 		8B8EB7E8156A74B00061CF0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E7156A74B00061CF0C /* Foundation.framework */; };
 		8B8EB7EA156A74B00061CF0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E9156A74B00061CF0C /* CoreGraphics.framework */; };
@@ -276,6 +284,17 @@
 		24F8079C189BFDDB00794F34 /* NSString+Matching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Matching.h"; sourceTree = "<group>"; };
 		24F8079D189BFDDB00794F34 /* NSString+Matching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Matching.m"; sourceTree = "<group>"; };
 		24F807C6189BFE1800794F34 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		24F807F6189C42DB00794F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PMMain_iPad.storyboard; sourceTree = "<group>"; };
+		24F807F8189C42DB00794F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PMMain_iPhone.storyboard; sourceTree = "<group>"; };
+		24F807FD189C42DB00794F34 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		24F807FE189C42DB00794F34 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		24F80801189C42DB00794F34 /* PMActivityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMActivityProvider.h; sourceTree = "<group>"; };
+		24F80802189C42DB00794F34 /* PMActivityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMActivityProvider.m; sourceTree = "<group>"; };
+		24F80805189C42DB00794F34 /* PMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMViewController.h; sourceTree = "<group>"; };
+		24F80806189C42DB00794F34 /* PMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMViewController.m; sourceTree = "<group>"; };
+		24F80807189C42DB00794F34 /* PMYouTubeSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMYouTubeSong.h; sourceTree = "<group>"; };
+		24F80808189C42DB00794F34 /* PMYouTubeSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMYouTubeSong.m; sourceTree = "<group>"; };
+		24F8082F189C466F00794F34 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		8B8EB7E1156A74B00061CF0C /* SDNestedTablesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDNestedTablesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8EB7E5156A74B00061CF0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B8EB7E7156A74B00061CF0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -295,6 +314,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F80830189C466F00794F34 /* CoreMedia.framework in Frameworks */,
 				24F807C7189BFE1800794F34 /* AVFoundation.framework in Frameworks */,
 				24A9478E18859C6600362C51 /* MediaPlayer.framework in Frameworks */,
 				24A9478C18859C5900362C51 /* JavaScriptCore.framework in Frameworks */,
@@ -402,6 +422,7 @@
 		24A9458018809ECA00362C51 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				24F807E1189C42DB00794F34 /* PlayerMerchlar */,
 				24F80765189BFDDB00794F34 /* MBProgressHUD */,
 				24F8078F189BFDDB00794F34 /* BLYYoutubeExtractor */,
 				24A9476A18859AE100362C51 /* LBYouTubeView */,
@@ -616,6 +637,31 @@
 			path = BLYYoutubeExtractor;
 			sourceTree = "<group>";
 		};
+		24F807E1189C42DB00794F34 /* PlayerMerchlar */ = {
+			isa = PBXGroup;
+			children = (
+				24F807F4189C42DB00794F34 /* PlayerMerchlar */,
+			);
+			path = PlayerMerchlar;
+			sourceTree = "<group>";
+		};
+		24F807F4189C42DB00794F34 /* PlayerMerchlar */ = {
+			isa = PBXGroup;
+			children = (
+				24F807F5189C42DB00794F34 /* PMMain_iPad.storyboard */,
+				24F807F7189C42DB00794F34 /* PMMain_iPhone.storyboard */,
+				24F807FD189C42DB00794F34 /* pause.png */,
+				24F807FE189C42DB00794F34 /* play.png */,
+				24F80801189C42DB00794F34 /* PMActivityProvider.h */,
+				24F80802189C42DB00794F34 /* PMActivityProvider.m */,
+				24F80805189C42DB00794F34 /* PMViewController.h */,
+				24F80806189C42DB00794F34 /* PMViewController.m */,
+				24F80807189C42DB00794F34 /* PMYouTubeSong.h */,
+				24F80808189C42DB00794F34 /* PMYouTubeSong.m */,
+			);
+			path = PlayerMerchlar;
+			sourceTree = "<group>";
+		};
 		8B8EB7D6156A74AF0061CF0C = {
 			isa = PBXGroup;
 			children = (
@@ -645,6 +691,7 @@
 		8B8EB7E4156A74B00061CF0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24F8082F189C466F00794F34 /* CoreMedia.framework */,
 				24F807C6189BFE1800794F34 /* AVFoundation.framework */,
 				24A9478D18859C6600362C51 /* MediaPlayer.framework */,
 				24A9478B18859C5900362C51 /* JavaScriptCore.framework */,
@@ -717,6 +764,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8B8EB7D6156A74AF0061CF0C;
 			productRefGroup = 8B8EB7E2156A74B00061CF0C /* Products */;
@@ -738,10 +786,12 @@
 				24A46E55188ED34100C059E7 /* disclosure@2x.png in Resources */,
 				24A46E51188ED34100C059E7 /* blueLedSmall@2x.png in Resources */,
 				24A946D618809ECB00362C51 /* Makefile.am in Resources */,
+				24F8081A189C42DB00794F34 /* PMMain_iPad.storyboard in Resources */,
 				24A46E56188ED34100C059E7 /* Default-568h@2x.png in Resources */,
 				24A946C518809ECB00362C51 /* Makefile.am in Resources */,
 				24A46E88188ED69800C059E7 /* error-icon-large~iphone.png in Resources */,
 				24A46E74188ED36600C059E7 /* WatiBPlayerError.xib in Resources */,
+				24F8081B189C42DB00794F34 /* PMMain_iPhone.storyboard in Resources */,
 				8BA40493159E214E00F3D367 /* InfoPlist.strings in Resources */,
 				24A46E5C188ED34100C059E7 /* shinsekai.png in Resources */,
 				24A46E86188ED69800C059E7 /* error-icon-large@2x~iphone.png in Resources */,
@@ -753,8 +803,10 @@
 				24A46E4E188ED34100C059E7 /* blueLedBig@2x.png in Resources */,
 				24A46E85188ED69800C059E7 /* error-icon-large@2x~ipad.png in Resources */,
 				24A46E71188ED36600C059E7 /* SDGroupCell.xib in Resources */,
+				24F8081F189C42DB00794F34 /* pause.png in Resources */,
 				24A46E72188ED36600C059E7 /* SDNestedTableView.xib in Resources */,
 				24A46E52188ED34100C059E7 /* blueLedSmallOff.png in Resources */,
+				24F80820189C42DB00794F34 /* play.png in Resources */,
 				24A46E53188ED34100C059E7 /* blueLedSmallOff@2x.png in Resources */,
 				24A46E73188ED36600C059E7 /* SDSubCell.xib in Resources */,
 			);
@@ -783,6 +835,7 @@
 				24A9471C1880A20200362C51 /* NSData+ImageContentType.m in Sources */,
 				24F807BC189BFDDB00794F34 /* BLYYoutubeURLCollection.m in Sources */,
 				24F807BA189BFDDB00794F34 /* BLYYoutubeExtractor.m in Sources */,
+				24F80825189C42DB00794F34 /* PMYouTubeSong.m in Sources */,
 				24A46E77188ED36600C059E7 /* SDSelectableCell.m in Sources */,
 				24A9470018809ECB00362C51 /* rescaler.c in Sources */,
 				24F807B9189BFDDB00794F34 /* BLYHTTPConnection.m in Sources */,
@@ -798,10 +851,12 @@
 				24A946FB18809ECB00362C51 /* huffman_encode.c in Sources */,
 				24A46E79188ED36600C059E7 /* WatiBAppStoreButton.m in Sources */,
 				24A946F718809ECB00362C51 /* bit_writer.c in Sources */,
+				24F80822189C42DB00794F34 /* PMActivityProvider.m in Sources */,
 				24A9468618809ECA00362C51 /* SDWebImageCompat.m in Sources */,
 				24A946C418809ECB00362C51 /* layer.c in Sources */,
 				24A9470118809ECB00362C51 /* thread.c in Sources */,
 				24A946FF18809ECB00362C51 /* random.c in Sources */,
+				24F80824189C42DB00794F34 /* PMViewController.m in Sources */,
 				24A9468A18809ECA00362C51 /* SDWebImageManager.m in Sources */,
 				24A946C218809ECB00362C51 /* idec.c in Sources */,
 				24A946D418809ECB00362C51 /* enc_sse2.c in Sources */,
@@ -841,6 +896,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		24F807F5189C42DB00794F34 /* PMMain_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24F807F6189C42DB00794F34 /* Base */,
+			);
+			name = PMMain_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		24F807F7189C42DB00794F34 /* PMMain_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24F807F8189C42DB00794F34 /* Base */,
+			);
+			name = PMMain_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
 		8BA40491159E214E00F3D367 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

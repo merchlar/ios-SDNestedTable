@@ -10,3 +10,6 @@
 [submodule "lib/MBProgressHUD"]
 	path = lib/MBProgressHUD
 	url = https://github.com/merchlar/MBProgressHUD
+[submodule "lib/PlayerMerchlar"]
+	path = lib/PlayerMerchlar
+	url = ssh://fj@172.20.0.9/var/git/Merchlar_Internal/iOS_Libraries/youtube_player.git

@@ -193,6 +193,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"ARTargetImages"];
     query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    [query orderByDescending:@"updatedAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
